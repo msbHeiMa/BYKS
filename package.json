@@ -1,0 +1,27 @@
+{
+  "name": "swigbootstrap",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node www.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "memcached": "^2.2.2",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0",
+    "swig": "~1.4.2"
+  },
+  "devDependencies": {
+    "grunt-swig-templates": "*",
+    "grunt-contrib-copy": "*",
+    "grunt": "*",
+    "grunt-contrib-requirejs": "~1.0.0",
+    "fis3":"*",
+    "fis3-hook-module":"~1.2.2",
+    "fis3-hook-amd":"~0.2.0"
+  }
+}

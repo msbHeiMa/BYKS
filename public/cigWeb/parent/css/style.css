@@ -1,0 +1,259 @@
+body.skin-blue.sidebar-mini {
+    /*background: url("../img/bg.jpg") center top;*/
+}
+
+.l-head {
+    /* width: 1200px; */
+    /* margin: 0 auto; */
+    height: 54px;
+    background: #004584; 
+}
+
+.l-topbar {
+    height: 100%;
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+span.l-header-logo {
+    width: 54px;
+    line-height: 54px;
+    display: inline-block;
+    height: 54px;
+    font-size: 24px;
+    text-indent: -9999px;
+    background: url("../img/logo.png") center top;
+}
+
+span.l-header-left {
+    display: inline-block;
+    line-height: 54px;
+    color: #fff;
+    font-size: 22px;
+    height: 54px;
+}
+.l-header-right {
+    display: block;
+    float: right;
+    height: 100%;
+    width: 100px;
+    background: url("../img/account.png") no-repeat center right;
+    margin-right: 10px;
+}
+
+.l-content {
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 600px;
+    overflow:auto;
+    margin-bottom:30px;
+}
+
+.cig-breadcrumb a {
+    color: #222;
+    font-size: 16px;
+}
+
+.cig-breadcrumb {
+    word-spacing: 3px;
+    padding-top: 19px;
+    padding-bottom: 16px;
+}
+
+.cig-menu-level1 ul, .cig-menu-level1 li,.cig-menu-level2 ul, .cig-menu-level2 li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cig-menu-level1 a {
+    color: #0065b2;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.cig-menu-level1 li:hover a,.cig-menu-level1 li.active a {
+    color: #fff;
+}
+
+.cig-menu-level1 li:hover, .cig-menu-level1 li.active {
+    background: #097bd3;
+}
+
+.cig-menu-level1 li {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cig-menu-level1 li {
+    font-size: 16px;
+    text-indent: 11px;
+}
+
+.cig-menu-level1 {
+    width: 231px;
+}
+
+.cig-menu-level1 .glyphicon {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    font-weight: 100;
+}
+.cig-menu-level2 {position: absolute;top: 0;left: 231px;border-left: 1px solid #d0cdc1;padding-left: 29px;width: 351px; background-color: #fff;}
+.cig-content {
+    position: relative;
+}
+
+.cig-menu-level2 h3 {
+    line-height: 21px;
+    padding: 10px 0px 10px 7px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.cig-menu-level2 .tit {
+    line-height: 23px;
+    color: #0065b2;
+    font-size: 16px;
+}
+
+.cig-menu-level2 li {
+    height: 108px;
+    padding: 11px 12px 11px 19px;
+    /* width: 319px; */
+    position: relative;
+    cursor: pointer;
+}
+
+.cig-menu-level2 p {
+    line-height: 19px;
+    margin: 0;
+    padding: 2px 40px 0 0;
+    height: 60px;
+    overflow: hidden;
+}
+
+.cig-menu-level2 li:hover,.cig-menu-level2 li.active {
+    background: #ffd866;
+}
+
+.cig-menu-level2 .glyphicon {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    top: 46px;
+    color: #097bd3;
+}
+
+
+.cig-menu-level1.cig-menu-expand {
+    width: 121px;
+}
+
+.cig-menu-level1.cig-menu-expand .glyphicon {
+    display: none;
+}
+
+.cig-menu-level2.cig-menu-expand {
+    left: 120px;
+    padding-left: 0px;
+    width: 242px;
+}
+
+.cig-menu-level2.cig-menu-expand h3 {
+    padding-left:7px;
+}
+
+.cig-menu-level2.cig-menu-expand li {
+    padding-left: 11px;
+}
+
+.cig-menu-level3 {
+    left: 361px;
+}
+
+.cig-menu-level2.cig-menu-expand li:hover,.cig-menu-level2.cig-menu-expand li.active {
+    background: #097bd3;
+    color: #fff;
+}
+
+.cig-menu-level2.cig-menu-expand li:hover a, .cig-menu-level2.cig-menu-expand li.active a {
+    color: #fff;
+}
+
+.cig-menu-level2.cig-menu-expand p {
+    padding-right: 20px;
+}
+
+.cig-menu-level3.cig-menu-expand {
+    left: 361px;
+}
+.cig-menu-level3{
+    padding-top:41px; 
+}
+.cig-menu-level4{
+    padding-top:82px; 
+}
+.cig-menu-level5{
+    padding-top:123px; 
+}
+
+.cig-menu-level4,.cig-menu-level4.cig-menu-expand{
+    left: 603px;
+}
+.cig-menu-level5,.cig-menu-level5.cig-menu-expand {
+    left: 845px;
+}
+
+.cig-menu-level-leaf {
+    width: auto;
+    right: 0;
+}
+
+.cig-menu-level2{
+    z-index: 2
+}
+.cig-menu-level3{
+    z-index: 3
+}
+.cig-menu-level4{
+    z-index: 4
+}
+.cig-menu-level1,.cig-menu-level2,.cig-menu-level3,.cig-menu-level4
+{
+    -webkit-transition: .6s left;
+    -o-transition: .6s left;
+    transition: .6s left;
+}
+.cig-menu-level-leaf .cig-service li:hover {
+    background: transparent;
+}
+.cig-menu-level-leaf .cig-service li {
+    cursor: inherit;
+    height: auto;
+    padding: 5px;
+}
+.cig-menu-level-leaf .cig-service p {
+    height: auto
+}
+.cig-service h5 {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.cig-hide-menu .cig-menu-level1,
+.cig-hide-menu .cig-menu-level2,
+.cig-hide-menu .cig-menu-level3,
+.cig-hide-menu .cig-menu-level4
+{
+    height: 0px;
+    overflow: hidden;
+    padding: 0;
+    display: none;
+}

@@ -1,0 +1,845 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" /> 
+    <script src="/components/jquery-2.1.4/dist/jquery.min.js"></script>
+    <style> 
+a{
+    text-decoration: none;
+}
+td{
+    font-size: small;
+}
+.btn1{
+	float: right; 
+	width: 60px; 
+	height: 25px; 
+	margin: 5px;
+}
+.tabul{
+	display: table;
+    content: " ";
+	padding-left: 0;
+	margin-bottom: 5px;
+}
+.tabli{
+float: left;
+    display: block;
+}
+.tabul>li.active>a{
+	color: #6dcde9;
+	background-color: #ffffff;
+    border: 1px solid #d4d4d4;
+    border-bottom-color: transparent;
+}
+.tabul>li>a{
+	color: #333;
+	background-color: #f5f5f5;
+	border: 1px solid #d4d4d4;
+    border-bottom-color: transparent;
+    padding: 5px 8px;
+    line-height: 1.42857143;
+    text-decoration: none;
+}
+td>input{
+	text-align: center;
+	color: #a09f9f;
+	width:300px;
+	height:25px;
+	margin:2px 0px 2px 30px;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+	background-color:#f7f7f7;
+}
+td>textarea{
+	width:300px;
+	height:70px;
+	margin:2px 0px 2px 30px;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+	background-color:#f7f7f7;
+}
+
+.tabul1{
+	display: table;
+	content: " ";
+	padding-left: 0;
+	margin-bottom: 5px;
+}
+.tabul1>li.active>a{
+	color: #6dcde9;
+	background-color: #ffffff;
+    border: 1px solid #d4d4d4;
+    border-bottom-color: transparent;
+}
+.tabul1>li>a{
+	color: #333;
+	margin-right:2px;
+    padding: 6px 18px;
+	border-radius: 5px 5px 0px 0px;
+    line-height: 1.42857143;
+    text-decoration: none;
+}
+.address{
+    background-image: url(img/location.png);
+    background-repeat: no-repeat;
+    background-size: 7%;
+    background-position: right;
+}
+.td1{
+width:100px;
+padding-left: 50px;
+text-align: right;
+}
+.pageTable{
+    width:100%;
+    border-spacing: 0px;
+}
+.pageTable>tbody>tr{
+    height: 30px;
+}
+.pageTable>tbody>tr>td{
+    text-align: center;
+    height: 30px;
+    border: 1px solid #d7d7d7;
+}
+.evenTr{
+    background-color: #f2f2f2;
+}
+.titleTr>td{
+    font-weight:bold;
+    background-color: #e4e4e4;
+}
+.pager{
+    height: 30px;
+    border: 1px solid #d7d7d7;
+    background-color: #e4e4e4;
+}
+.pager>span{
+    padding: 5px;
+    float: right;
+    font-size: small;
+}
+</style>
+<script>
+    $(function () {
+        $(".tabul li").on("click", function (e) {
+            var id = $(this).attr("id");
+            var divId = id + "Div";
+            $(".tabul li").removeClass("active");
+            $(".tabDiv").css("display", "none");
+            $("#" + id).addClass("active");
+            $("#" + divId).css("display", "block");
+        });
+        $(".tabul1 li").on("click", function (e) {
+            var id = $(this).attr("id");
+            var divId = id + "Div";
+            $(this).siblings().removeClass("active");
+            $(this).parent().parent().nextAll().css("display", "none");
+            $("#" + id).addClass("active");
+            $("#" + divId).css("display", "block");
+        });
+    });
+    function showDetail(){
+        $("#csbjDiv").css("display","none");
+        $("#csbjDetail").css("display","block");
+
+    }
+    function toMap(id,type){
+        var idStr = encodeURIComponent(id);
+        var url = "http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id="+idStr+"&type="+type;
+        window.open(url)
+    }
+</script>
+</head>
+
+<body>
+    <div style="width: 1200px;height: 35px;background: #f7f7f7;border-style: none none solid none;border-color: #c7c4c4;border-bottom-width: 1px;">
+<input type="button" class="btn1" value="全屏" />
+<input type="button" class="btn1" value="关闭" />
+</div>
+<div style="width: 1200px;">
+<h4 style="text-align: center;">事件相关信息详情</h4>
+<div style="border-bottom: 1px solid #ddd;">
+<ul class="tabul">
+    <!--<li id="jbxx" class="tabli active"><a href="javascript:;">基本信息</a></li> -->
+    <li id="csbj" class="tabli active"><a href="javascript:;">城市部件</a></li>
+    <li id="dxgd" class="tabli"><a href="javascript:;">地下管道</a></li>
+    <li id="xgxx" class="tabli"><a href="javascript:;">相关学校</a></li>
+</ul>
+</div>
+<!--<div id="jbxxDiv" class="tabDiv">
+    <table style="    margin-top: 30px;    margin-left: 50px;">
+    <tbody>
+        <tr>
+            <td>事件内容：</td>
+            <td><input readonly /></td>
+        </tr>
+        <tr>
+            <td>事件地址：</td>
+            <td><input readonly class="addInput"/></td>
+        </tr>
+        <tr>
+            <td>事发事件：</td>
+            <td><input readonly /></td>
+        </tr>
+        <tr>
+            <td>所属网格：</td>
+            <td><input readonly /></td>
+        </tr>
+        <tr>
+            <td>报案渠道：</td>
+            <td><input readonly /></td>
+        </tr>
+        <tr>
+            <td>网格员姓名：</td>
+            <td><input readonly /></td>
+        </tr>
+        <tr>
+            <td>网格员联系方式：</td>
+            <td><input readonly /></td>
+        </tr>
+        <tr>
+            <td>报案人：</td>
+            <td><input readonly /></td>
+        </tr>
+        <tr>
+            <td>报案人联系方式：</td>
+            <td><input readonly /></td>
+        </tr>
+        <tr>
+            <td>首接责任单位：</td>
+            <td><input readonly /></td>
+        </tr>
+        <tr>
+            <td>相关责任单位：</td>
+            <td><textarea readonly="readonly"></textarea></td>
+        </tr>
+    </tbody>
+    </table>
+</div>-->
+<div id="csbjDiv" class="tabDiv" >
+    <p style="margin:20px 0px 0px 30px;">事件发生地点十米范围内的部件信息如下：</p>
+    <div style="margin:30px 0px 20px 40px;">
+        <div style="border-bottom: 1px solid #ddd;">
+            <ul class="tabul1">
+                <li id="bjxx" class="tabli active "><a href="javascript:;">部件信息</a></li>
+            </ul>
+        </div>
+        <div id="bjxxDiv" style="margin-top:20px;">
+            <table class="pageTable">
+                <tr class="titleTr">
+                    <td>序号</td>
+                    <td>名称</td>
+                    <td>管理单位</td>
+                    <td>材质</td>
+                    <td>状态</td>
+                    <td>现势性</td>
+                    <td>初始时间</td>
+                    <td>变更时间</td>
+                    <td>联系人</td>
+                    <td>联系电话</td>
+                    <td>所在单元网格</td>
+                    <td>定位</td>
+                </tr>
+                <tr class="contentTr">
+                    <td>1</td>
+                    <td><a href="javascript:;" onclick="showDetail()">燃气井盖</a></td>
+                    <td>京兴天然气公司</td>
+                    <td>复合材料</td>
+                    <td>完好</td>
+                    <td>在用</td>
+                    <td>2012/7/10</td>
+                    <td>2015/4/6</td>
+                    <td>李明伟</td>
+                    <td>15612316789</td>
+                    <td>小林山网格（第一网格）</td>
+                    <td><a target="_blank" href="http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id=3305220102007923&type=4"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>2</td>
+                    <td>电信井盖</td>
+                    <td>移动长兴分公司</td>
+                    <td>混泥土</td>
+                    <td>完好</td>
+                    <td>在用</td>
+                    <td>2012/7/10</td>
+                    <td>2015/4/6</td>
+                    <td>王建国</td>
+                    <td>15612316799</td>
+                    <td>小林山网格（第一网格）</td>
+                    <td><a target="_blank" href="http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id=3305220107003492&type=4"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr">
+                    <td>3</td>
+                    <td>电力井盖</td>
+                    <td>县供电局</td>
+                    <td>混泥土</td>
+                    <td>完好</td>
+                    <td>在用</td>
+                    <td>2012/7/10</td>
+                    <td>2015/4/6</td>
+                    <td>李宏业</td>
+                    <td>15612316710</td>
+                    <td>小林山网格（第一网格）</td>
+                    <td><a target="_blank" href="http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id=3305220105004288&type=4"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>4</td>
+                    <td>上水井盖</td>
+                    <td>水务公司</td>
+                    <td>混泥土</td>
+                    <td>完好</td>
+                    <td>在用</td>
+                    <td>2012/7/10</td>
+                    <td>2015/4/6</td>
+                    <td>李业</td>
+                    <td>15612316720</td>
+                    <td>小林山网格（第一网格）</td>
+                    <td><a target="_blank" href="http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id=3305220101003723&type=4"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr">
+                    <td>5</td>
+                    <td>雨水井盖</td>
+                    <td>县建设局</td>
+                    <td>复合材料</td>
+                    <td>完好</td>
+                    <td>在用</td>
+                    <td>2012/7/10</td>
+                    <td>2015/4/6</td>
+                    <td>李光明</td>
+                    <td>15612316765</td>
+                    <td>小林山网格（第一网格）</td>
+                    <td><a target="_blank" href="http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id=3305220103006705&type=4"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>6</td>
+                    <td>路灯</td>
+                    <td>县建设局</td>
+                    <td>压铸铝</td>
+                    <td>完好</td>
+                    <td>在用</td>
+                    <td>2012/7/10</td>
+                    <td>2015/4/6</td>
+                    <td>李伟</td>
+                    <td>15612434776</td>
+                    <td>小林山网格（第一网格）</td>
+                    <td><a target="_blank" href="http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id=3305220118005372&type=4"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr">
+                    <td>7</td>
+                    <td>路灯</td>
+                    <td>县建设局</td>
+                    <td>压铸铝</td>
+                    <td>完好</td>
+                    <td>在用</td>
+                    <td>2012/7/10</td>
+                    <td>2015/4/6</td>
+                    <td>李伟</td>
+                    <td>15612434776</td>
+                    <td>小林山网格（第一网格）</td>
+                    <td><a target="_blank" href="http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id=3305220118005373&type=4"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>8</td>
+                    <td>公交站亭</td>
+                    <td>县交通运输局</td>
+                    <td>金属</td>
+                    <td>完好</td>
+                    <td>在用</td>
+                    <td>2008/2/22</td>
+                    <td>2014/12/27</td>
+                    <td>李金华</td>
+                    <td>13612378988</td>
+                    <td>小林山网格（第一网格）</td>
+                    <td><a target="_blank" href="http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id=3305220203000137&type=4"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr">
+                    <td>9</td>
+                    <td>公交站亭</td>
+                    <td>县交通运输局</td>
+                    <td>金属</td>
+                    <td>完好</td>
+                    <td>在用</td>
+                    <td>2008/2/22</td>
+                    <td>2014/12/27</td>
+                    <td>李金华</td>
+                    <td>13612378988</td>
+                    <td>小林山网格（第一网格）</td>
+                    <td><a target="_blank" href="http://222.46.11.118:65091/cx_yanshi/SmartCity/tool/TestForHTZH.html?id=3305220203000138&type=4"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="pager">
+                <span>
+                    <span>当前第&nbsp;1&nbsp;页</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>共&nbsp;1&nbsp;页</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="javascript:;">首页</a>
+                    <a href="javascript:;">上一页</a>
+                    <a href="javascript:;">下一页</a>
+                    <a href="javascript:;">最后页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>跳转至</span>
+                    <input style="width: 40px;border-radius: 5px;" />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="go" style="border-radius: 5px;background-color: #6dcde9"/>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="csbjDetail" class="tabDiv" style="display: none">
+    <div style="margin:30px 0px 20px 140px;width: 80%;">
+        <table class="pageTable">
+            <tr>
+                <td style="width:12%;background-color:#347ef5">井盖详情</td>
+                <td style="width:38%;border: 0px"></td>
+                <td style="width:12%;border: 0px"></td>
+                <td style="width:38%;border: 0px"></td>
+                <td colspan="3" style="border: 0px"></td>
+            </tr>
+            <tr>
+                <td>标识码</td>
+                <td>3305220102007923</td>
+                <td>名称</td>
+                <td>燃气井盖</td>
+            </tr>
+            <tr>
+                <td>主管部门代码</td>
+                <td>330522011</td>
+                <td>主管部门名称</td>
+                <td>京兴天然气公司</td>
+            </tr>
+            <tr>
+                <td>权属单位代码</td>
+                <td>330522011</td>
+                <td>权属单位名称</td>
+                <td>京兴天然气公司</td>
+            </tr>
+            <tr>
+                <td>养护单位代码</td>
+                <td>330522011</td>
+                <td>养护单位名称</td>
+                <td>京兴天然气公司</td>
+            </tr>
+            <tr>
+                <td>材质</td>
+                <td>复合材料</td>
+                <td>联系人</td>
+                <td>李明伟</td>
+            </tr>
+            <tr>
+                <td>联系电话</td>
+                <td>15612316769</td>
+                <td>移动电话</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>所在单元网格</td>
+                <td>小林山网格（第一网格）</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>位置描述</td>
+                <td colspan="3">长兴县雉城街道</td>
+            </tr>
+            <tr>
+                <td>状态</td>
+                <td>完好</td>
+                <td>现势性</td>
+                <td>在用</td>
+            </tr>
+            <tr>
+                <td>初始时间</td>
+                <td>2012/7/10</td>
+                <td>数据来源</td>
+                <td>实测</td>
+            </tr>
+            <tr>
+                <td>横坐标</td>
+                <td>31.01903197</td>
+                <td>从坐标</td>
+                <td>119.91074017</td>
+            </tr>
+            <tr>
+                <td style="height:100px;">备注</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>变更时间</td>
+                <td colspan="3">2015/4/6</td>
+            </tr>
+            <tr>
+                <td>变更原因</td>
+                <td colspan="3">日常巡查部件/公共设施/燃气井盖/井盖破损</td>
+            </tr>
+            <tr>
+                <td>处理结果</td>
+                <td colspan="3">井盖已修复</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="height:200px"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="dxgdDiv" class="tabDiv" style="display: none">
+    <p style="margin:20px 0px 0px 30px;">事件发生地点十米范围内的管网信息如下：</p>
+    <div style="margin:30px 0px 20px 40px;">
+        <div style="border-bottom: 1px solid #ddd;">
+            <ul class="tabul1">
+                <li id="gwxx" class="tabli active "><a href="javascript:;">管网信息</a></li>
+            </ul>
+        </div>
+        <div id="gwxxDiv" style="margin-top:20px;">
+            <table class="pageTable">
+                <tr class="titleTr">
+                    <td>序号</td>
+                    <td>管线性质</td>
+                    <td>起点埋深</td>
+                    <td>终点埋深</td>
+                    <td>埋设方式</td>
+                    <td>材质</td>
+                    <td>规格</td>
+                    <td>套管尺寸</td>
+                    <td>流向</td>
+                    <td>建设年代</td>
+                    <td>权属单位</td>
+                    <td>道路名称</td>
+                    <td>定位</td>
+                </tr>
+                <tr class="contentTr">
+                    <td>1</td>
+                    <td>交通信号</td>
+                    <td>0.33</td>
+                    <td>0.27</td>
+                    <td>管埋</td>
+                    <td>铜</td>
+                    <td>150×50</td>
+                    <td>50/塑</td>
+                    <td>东向西</td>
+                    <td>2012</td>
+                    <td>交通局</td>
+                    <td>双拥路</td>
+                    <td><a href="javascript:;" onclick="toMap('交通信号','5');"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>2</td>
+                    <td>监控</td>
+                    <td>0.13</td>
+                    <td>0.06</td>
+                    <td>管埋</td>
+                    <td>光纤</td>
+                    <td>90×30</td>
+                    <td>30/塑</td>
+                    <td>东向西</td>
+                    <td>2008</td>
+                    <td>公安局</td>
+                    <td>菱山路</td>
+                    <td><a href="javascript:;" onclick="toMap('监控','5');"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr">
+                    <td>3</td>
+                    <td>天然气</td>
+                    <td>1.05</td>
+                    <td>0.88</td>
+                    <td>直埋</td>
+                    <td>铜</td>
+                    <td>159</td>
+                    <td></td>
+                    <td>东向西</td>
+                    <td>2008</td>
+                    <td>京兴天然气公司</td>
+                    <td>双拥路</td>
+                    <td><a href="javascript:;" onclick="toMap('天然气','5');"><img src="img/location.png" width="20px" height="20px"/></a></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="contentTr">
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="contentTr">
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="contentTr">
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="contentTr evenTr">
+                    <td>10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="pager">
+                <span>
+                    <span>当前第&nbsp;1&nbsp;页</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>共&nbsp;1&nbsp;页</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="javascript:;">首页</a>
+                    <a href="javascript:;">上一页</a>
+                    <a href="javascript:;">下一页</a>
+                    <a href="javascript:;">最后页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>跳转至</span>
+                    <input style="width: 40px;border-radius: 5px;" />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="go" style="border-radius: 5px;background-color: #6dcde9"/>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="xgxxDiv" class="tabDiv" style="display: none">
+    <p style="margin:20px 0px 0px 30px;">事件发生地点附近学校信息如下：</p>
+    <div style="margin:30px 0px 20px 40px;">
+        <div style="border-bottom: 1px solid #ddd;">
+            <ul class="tabul1">
+                <li id="cxxsyxx" class="tabli active "><a href="javascript:;">长兴县实验小学</a></li>
+                <li id="zjscxzx" class="tabli"><a href="javascript:;">浙江省长兴中学</a></li>
+            </ul>
+        </div>
+        <div id="cxxsyxxDiv" class="tabDiv1" style="margin-top:20px;">
+            <table>
+                <tr>
+                    <td class="td1">学校性质：</td>
+                    <td><input readonly value="民办"/></td>
+                    <td class="td1">学校地址：</td>
+                    <td><input readonly class="address" value="长兴县龙山街道金陵北路87号"/><span  onclick="toMap('长兴县实验小学','6');" style="width:30px;height:30px;position:absolute;z-index: 1;margin-left: -30px;"></span></td>
+                </tr>
+                <tr>
+                    <td class="td1">值班人员：</td>
+                    <td><input readonly value="李阳"/></td>
+                    <td class="td1">电话：</td>
+                    <td><input readonly value="0527-6228218" /></td>
+                </tr>
+                <tr>
+                    <td class="td1">使用状态：</td>
+                    <td colspan="3" style="text-align: left;"><span style="margin: 2px 0px 2px 30px;">上午：8:30——12:00&nbsp;&nbsp;&nbsp;&nbsp; 下午：15:30——17:00</span></td>
+                </tr>
+            </table>
+            <p style="margin-left: 40px;color: #6dcde9;font-size: small">校车编号：001</p>
+            <table>
+                <tr>
+                    <td class="td1">司机姓名：</td>
+                    <td><input readonly value="郑忠明"/></td>
+                    <td class="td1">司机联系方式：</td>
+                    <td><input readonly value="13757265577"/></td>
+                </tr>
+                <tr>
+                    <td class="td1">车牌号：</td>
+                    <td><input readonly value="浙EB9898"/></td>
+                    <td class="td1">核载人数：</td>
+                    <td><input readonly value="37" /></td>
+                </tr>
+                <tr>
+                    <td class="td1">校车路线：</td>
+                    <td colspan="3"  style="text-align: left;"><span style="margin: 2px 0px 2px 30px;">长兴县实验小学—————金陵路—————龙山大道</span></td>
+                </tr>
+                <tr>
+                    <td class="td1">校车到达时间：</td>
+                    <td><input readonly value="17:40" /></td>
+                    <td class="td1"></td>
+                    <td></td>
+                </tr>
+            </table>
+            <p style="margin-left: 40px;color: #6dcde9;font-size: small">校车编号：002</p>
+            <table>
+                <tr>
+                    <td class="td1">司机姓名：</td>
+                    <td><input readonly value="李林华"/></td>
+                    <td class="td1">司机联系方式：</td>
+                    <td><input readonly value="13757263675"/></td>
+                </tr>
+                <tr>
+                    <td class="td1">车牌号：</td>
+                    <td><input readonly value="浙EE1377"/></td>
+                    <td class="td1">核载人数：</td>
+                    <td><input readonly value="37" /></td>
+                </tr>
+                <tr>
+                    <td class="td1">校车路线：</td>
+                    <td colspan="3"  style="text-align: left;"><span style="margin: 2px 0px 2px 30px;">长兴县实验小学—————龙山特色街站——————白溪居委会站—————九川集团</span></td>
+                </tr>
+                <tr>
+                    <td class="td1">校车到达时间：</td>
+                    <td><input readonly value="17:35" /></td>
+                    <td class="td1"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div id="zjscxzxDiv" class="tabDiv1" style="margin-top:20px;display: none">
+            <table>
+                <tr>
+                    <td class="td1">学校性质：</td>
+                    <td><input readonly value="公办"/></td>
+                    <td class="td1">学校地址：</td>
+                    <td><input readonly class="address" value="长兴县龙山街道金陵北路208号"/><span  onclick="toMap('浙江省长兴中学','6');" style="width:30px;height:30px;position:absolute;z-index: 1;margin-left: -30px;"></span></td>
+                </tr>
+                <tr>
+                    <td class="td1">值班人员：</td>
+                    <td><input readonly value="张国城"/></td>
+                    <td class="td1">电话：</td>
+                    <td><input readonly value="0572-6228573" /></td>
+                </tr>
+                <tr>
+                    <td class="td1">使用状态：</td>
+                    <td colspan="3" style="text-align: left;"><span style="margin: 2px 0px 2px 30px;">上午：8:30——12:00&nbsp;&nbsp;&nbsp;&nbsp; 下午：14:30——17:30</span></td>
+                </tr>
+            </table>
+            <p style="margin-left: 40px;color: #6dcde9;font-size: small">校车编号：001</p>
+            <table>
+                <tr>
+                    <td class="td1">司机姓名：</td>
+                    <td><input readonly value="胡建祥"/></td>
+                    <td class="td1">司机联系方式：</td>
+                    <td><input readonly value="13867256880"/></td>
+                </tr>
+                <tr>
+                    <td class="td1">车牌号：</td>
+                    <td><input readonly value="浙EB9832"/></td>
+                    <td class="td1">核载人数：</td>
+                    <td><input readonly value="27" /></td>
+                </tr>
+                <tr>
+                    <td class="td1">校车路线：</td>
+                    <td colspan="3"  style="text-align: left;"><span style="margin: 2px 0px 2px 30px;">浙江省长兴中学—————金陵路—————龙山大道</span></td>
+                </tr>
+                <tr>
+                    <td class="td1">校车到达时间：</td>
+                    <td><input readonly value="17:50" /></td>
+                    <td class="td1"></td>
+                    <td></td>
+                </tr>
+            </table>
+            <p style="margin-left: 40px;color: #6dcde9;font-size: small">校车编号：002</p>
+            <table>
+                <tr>
+                    <td class="td1">司机姓名：</td>
+                    <td><input readonly value="李建国"/></td>
+                    <td class="td1">司机联系方式：</td>
+                    <td><input readonly value="13868732155"/></td>
+                </tr>
+                <tr>
+                    <td class="td1">车牌号：</td>
+                    <td><input readonly value="浙EB8772"/></td>
+                    <td class="td1">核载人数：</td>
+                    <td><input readonly value="27" /></td>
+                </tr>
+                <tr>
+                    <td class="td1">校车路线：</td>
+                    <td colspan="3"  style="text-align: left;"><span style="margin: 2px 0px 2px 30px;">浙江省长兴中学—————联华超市——————华盛中学—————经贸小区</span></td>
+                </tr>
+                <tr>
+                    <td class="td1">校车到达时间：</td>
+                    <td><input readonly value="17:55" /></td>
+                    <td class="td1"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>

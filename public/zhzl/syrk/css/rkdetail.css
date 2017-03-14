@@ -1,0 +1,98 @@
+.rk-ldgj ul,rk-ldgj li,.rk-ldgj dl,rk-ldgj dt,.rk-ldgj dd {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.rk-ldgj .index {
+    height: 100px;
+    background: url("../img/circle.png") no-repeat center center;
+}
+.rk-ldgj .index dt {
+    line-height: 100px;
+    font-size: 36px;
+    text-align: center;
+    /*padding-top: 23px;*/
+}
+.rk-ldgj .index dd {
+    text-align: center;
+}
+.rk-ldgj .vline {
+    width: 2px;
+    height: 30px;
+    background: #999999;
+    margin: -9px auto 0 auto;
+}
+.rk-ldgj .detail {
+    width: 190px;
+    margin: 0 auto;
+    border: 1px solid #999999;
+    border-radius: 10px;
+}
+.rk-ldgj .detail dt {
+    /*line-height: 40px;*/
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #f5f5f5;
+    border-radius: 10px 10px 0 0;
+}
+.rk-ldgj .detail .info li {
+    padding: 5px;
+}
+.rk-ldgj>ul>li {
+    float: left;
+    width: 25%;
+    position: relative;
+    min-height: 100px;
+}
+.rk-ldgj .arrow {
+    position: absolute;
+    top: 30px;
+    width: 80px;
+    height: 40px;
+    /*background: url(../img/arrow.png) no-repeat center bottom;*/
+    right: -40px;
+}
+
+.rk-ldgj .arrow .img{
+    height: 20px;
+    background: url(../img/arrow.png) no-repeat center center;
+}
+
+.rk-ldgj .arrow span {
+    display: block;
+    text-indent: 20px;
+    line-height: 10px;
+}
+.rk-ldgj .arrow.down {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: rotate(90deg);
+    height: 80px;
+    margin: 0 auto;
+    background-position: center;
+    padding-top: 20px;
+}
+.rk-ldgj .arrow.left{
+    right: auto;
+    left: -40px;
+}
+.rk-ldgj .arrow.left span {
+    text-indent: 28px;
+}
+.rk-ldgj .arrow.left .img {
+    transform: rotate(180deg);
+}
+.rk-ldgj .arrow.none {
+    display: none;
+}
+
+
+.imgPosition{
+    width: 100px;
+    height: 150px;
+    margin: 20px 0 0 90px;
+}
+div.imgPosition{
+    background: url("../img/nopic.png")
+}
