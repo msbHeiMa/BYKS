@@ -1,0 +1,13 @@
+body {
+  box-sizing: border-box;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+div{
+    border:2px solid;
+    height:200px;
+    width:100%;
+}
+#logo{
+    width:160px;
+    height:100px;
+}
