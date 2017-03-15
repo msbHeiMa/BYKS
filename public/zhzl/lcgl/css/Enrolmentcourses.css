@@ -1,0 +1,12 @@
+.border-left-biaoti{
+    width:100%;
+    background-color: #fff;
+    height:50px;
+    padding-top:6px;
+    text-align:left;
+    border-left:#e70c1d 2px solid;
+    padding-left:10px;
+}
+.main-right-mid{
+    margin-top:15px;
+}

@@ -8,7 +8,7 @@
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
 	<link rel="stylesheet" href="../../../components/bootstrap-3.3.7-dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="../../../components/bootstrap-3.3.7-dist/css/buttons.css" />
-	<link rel="stylesheet" href="../../../zhzl/lcgl/css/index.css" />
+	<link rel="stylesheet" href="../../../zhzl/lcgl/css/Mymanagement.css" />
 	<link rel="stylesheet" href="../../../zhzl/lcgl/css/layout.css" />
 
 </head>
@@ -61,7 +61,7 @@
 	</div>
 	<script src="../../../components/jquery/dist/jquery.min.js"></script>
 	<script src="../../../components/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-	<script type="text/javascript" src="../../../zhzl/lcgl/js/Videoteaching.js"></script>
+	<script type="text/javascript" src="../../../zhzl/lcgl/js/Mymanagement.js"></script>
 	<script>
 		$('.carousel').carousel();
 		$('#someTab').tab('show')

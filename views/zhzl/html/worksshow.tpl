@@ -8,7 +8,7 @@
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
 	<link rel="stylesheet" href="../../../components/bootstrap-3.3.7-dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="../../../components/bootstrap-3.3.7-dist/css/buttons.css" />
-	<link rel="stylesheet" href="../../../zhzl/lcgl/css/index.css" />
+	<link rel="stylesheet" href="../../../zhzl/lcgl/css/worksshow.css" />
 	<link rel="stylesheet" href="../../../zhzl/lcgl/css/layout.css" />
 
 </head>
@@ -25,7 +25,7 @@
 			<li><a href="Videoteaching.html">视频教学</a></li>
 			<li><a href="Enrolmentcourses.html">报名课程</a></li>
 			<li><a href="worksshow.html">作品展示</a></li>
-            <li><a href="Mymanagement.tpl.html">我的管理</a></li>
+            <li><a href="Mymanagement.html">我的管理</a></li>
 			<li><a href="login.html">登陆/注册</a></li>
 		</ul>
 
@@ -61,7 +61,7 @@
 	</div>
 	<script src="../../../components/jquery/dist/jquery.min.js"></script>
 	<script src="../../../components/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-	<script type="text/javascript" src="../../../zhzl/lcgl/js/Videoteaching.js"></script>
+	<script type="text/javascript" src="../../../zhzl/lcgl/js/worksshow.js"></script>
 	<script>
 		$('.carousel').carousel();
 		$('#someTab').tab('show')
