@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="../../../components/bootstrap-3.3.7-dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="../../../components/bootstrap-3.3.7-dist/css/buttons.css" />
 	<link rel="stylesheet" href="../../../zhzl/lcgl/css/index.css" />
+	<link rel="stylesheet" href="../../../zhzl/lcgl/css/layout.css" />
 
 </head>
 
@@ -16,15 +17,16 @@
 	<div id="nav">
 		<ul class="daohang">
 			<li>
-				<a href="#" class="img">
+				<a href="index.html" class="img">
 					<img src="../../../zhzl/lcgl/images/logo.jpg" alt="" id="logo">
 				</a>
 			</li>
-			<li><a href="#">首页</a></li>
-			<li><a href="#">视频教学</a></li>
-			<li><a href="#">报名课程</a></li>
-			<li><a href="#">作品展示</a></li>
-			<li><a href="#">登陆/注册</a></li>
+			<li><a href="index.html">首页</a></li>
+			<li><a href="Videoteaching.html">视频教学</a></li>
+			<li><a href="Enrolmentcourses.html">报名课程</a></li>
+			<li><a href="worksshow.html">作品展示</a></li>
+			<li><a href="Mymanagement.tpl.html">我的管理</a></li>
+			<li><a href="login.html">登陆/注册</a></li>
 		</ul>
 
 	</div>
@@ -130,125 +132,184 @@
 				</div>
 				<div class="main-right-bottom">
 					<h3>精彩内容欣赏</h3>
-					<div class="row">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="../../../zhzl/lcgl/images/30.jpg" alt="...">
-								<div class="caption">
-									<h4>星际争霸人物展示</h4>
-									<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
-									<p>
-										<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
-										<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
-									</p>
+					<div class="main-right-yidong">
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<div class="row">
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/30.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/31.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/32.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row">
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/33.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/34.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/35.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="../../../zhzl/lcgl/images/31.jpg" alt="...">
-								<div class="caption">
-									<h4>星际争霸人物展示</h4>
-									<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
-									<p>
-										<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
-										<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
-									</p>
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<div class="row">
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/36.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/37.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/38.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="../../../zhzl/lcgl/images/32.jpg" alt="...">
-								<div class="caption">
-									<h4>星际争霸人物展示</h4>
-									<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
-									<p>
-										<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
-										<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="../../../zhzl/lcgl/images/33.jpg" alt="...">
-								<div class="caption">
-									<h4>星际争霸人物展示</h4>
-									<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
-									<p>
-										<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
-										<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="../../../zhzl/lcgl/images/34.jpg" alt="...">
-								<div class="caption">
-									<h4>星际争霸人物展示</h4>
-									<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
-									<p>
-										<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
-										<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="../../../zhzl/lcgl/images/35.jpg" alt="...">
-								<div class="caption">
-									<h4>星际争霸人物展示</h4>
-									<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
-									<p>
-										<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
-										<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="../../../zhzl/lcgl/images/36.jpg" alt="...">
-								<div class="caption">
-									<h4>星际争霸人物展示</h4>
-									<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
-									<p>
-										<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
-										<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="../../../zhzl/lcgl/images/37.jpg" alt="...">
-								<div class="caption">
-									<h4>星际争霸人物展示</h4>
-									<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
-									<p>
-										<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
-										<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="../../../zhzl/lcgl/images/38.jpg" alt="...">
-								<div class="caption">
-									<h4>星际争霸人物展示</h4>
-									<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
-									<p>
-										<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
-										<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
-									</p>
+								<div class="item">
+									<div class="row">
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/30.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/31.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<div class="thumbnail">
+												<img src="../../../zhzl/lcgl/images/32.jpg" alt="...">
+												<div class="caption">
+													<h4>星际争霸人物展示</h4>
+													<p>确认其为请问饿我去粉色父亲为废弃恶恶请问我去饿让我去银行股权而我韩国热情个恶气</p>
+													<p>
+														<a href="#" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<a href="#" class="button button-raised button-default button-pill" role="button">分享</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

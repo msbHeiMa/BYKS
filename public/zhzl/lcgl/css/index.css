@@ -1,101 +1,3 @@
-body {
-  box-sizing: border-box;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color:#333;
-}
-body a{
-    color:#333;
-}
-body a:hover{
-    color:#40E0D0;
-}
-h3{
-    color:#40E0D0;
-    font-weight: 100;
-}
-/*div{
-   border:#333 1px solid;
-}*/
-#logo{
-    width:100px;
-    height:70px;
-}
-#nav{
-    overflow:hidden;
-    height:70px;
-    width:100%;
-    border-bottom:#00FF7F 2px solid; 
-    /*position: fixed;*/
-}
-
-.daohang{
-    float:left;
-    width:100%;
-    overflow:hidden;
-    list-style: none;
-}
-.daohang>li{
-    float:left;
-    width:200px;
-    height:70px;
-    text-align:center;
-    line-height: 70px;
-}
-.daohang>li>a{
-    display:block;
-    font-size:18px;
-    font-weight:100;
-    text-decoration:none;
-}
-.daohang>li>a:not(.img):hover{
-    color:#fff;
-    background-color:#00FF7F;
-}
-#main{
-    margin-top:15px;
-    width:100%;
-    float:left;
-    overflow:hidden;
-    text-align: -webkit-center;
-}
-.main{
-    width:90%;
-    overflow:hidden;
-}
-.main-left{
-    width:20%;
-    float:left;
-    overflow:hidden;
-}
-.main-left>ul{
-    list-style: none;
-    width:100%;  
-    padding:0 !important;
-}
-/*.main-left>ul>li{
-   
-    
-}*/
-.main-left>ul>li>a{
-    color:#fff;
-    display:block;
-    padding:2px 10px 2px 5px;
-    height:45px;
-    line-height: 45px;
-    background-color:#333;
-    border-top:#fff 1px solid;
-    font-size:15px;
-    text-decoration: none;
-}
-.main-left>ul>li>a:hover{
-    background-color:#00FF7F;
-}
-.main-right{
-    width:80%;
-    padding-left:10px;
-    float:left;
-    overflow:hidden;
-}
 .main-right-top{
     width:100%;
     float:left;
@@ -153,13 +55,8 @@ h3{
 #someTab{
     color:#31708f;
 }
-#footer{
-    width:100%;
+.main-right-yidong{
     float:left;
     overflow:hidden;
-    min-height:150px;
-    line-height:150px;
-    background-color: #333;
-    color:#fff;
-    text-align: center;
+    width:100%;
 }
