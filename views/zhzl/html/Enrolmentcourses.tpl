@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../../components/bootstrap-3.3.7-dist/css/buttons.css" />
     <link rel="stylesheet" href="../../../zhzl/lcgl/css/Enrolmentcourses.css" />
     <link rel="stylesheet" href="../../../zhzl/lcgl/css/layout.css" />
+    <link rel="SHORTCUT ICON" href="../../../logo.ico"/>
 
 </head>
 
@@ -59,7 +60,7 @@
                                 <img src="http://www.abilix.com/images/hdzx/tixi/3_09.png">
                                 <div class="caption">
                                     <h4>能力训练课程(AY1)</h4>
-                                    <p>大班至三年级</p>
+                                    <p>适合人群:大班至三年级</p>
                                     <p>WER比赛项目：积木机器人赛（I）</p>
                                     <p>课时：48</p>
                                     <p>
@@ -73,7 +74,7 @@
                             <div class="thumbnail">
                                 <img src="http://www.abilix.com/images/hdzx/tixi/3_11.png">
                                 <h4>能力训练课程(AY2)</h4>
-                                <p>AY1毕业生</p>
+                                <p>适合人群:AY1毕业生</p>
                                 <p>WER比赛项目：积木机器人赛（II），移动机器人赛（II）</p>
                                 <p>课时：64</p>
                                 <p>
@@ -86,7 +87,7 @@
                             <div class="thumbnail">
                                 <img src="http://www.abilix.com/images/hdzx/tixi/3_13.png">
                                 <h5>能力训练课程(AY3)</h5>
-                                <p>AY2毕业生</p>
+                                <p>适合人群:AY2毕业生</p>
                                 <p>WER比赛项目：积木机器人赛（III），模块机器人赛（I）</p>
                                 <p>课时：64</p>
                                 <p>
@@ -101,7 +102,7 @@
                             <div class="thumbnail">
                                 <img src="http://www.abilix.com/images/hdzx/tixi/3_15.png">
                                 <h5>能力训练课程(AY4)</h5>
-                                <p>AY3毕业生</p>
+                                <p>适合人群:AY3毕业生</p>
                                 <p>WER比赛项目：类人机器人赛（I），模块机器人赛（II），飞行机器人赛（I）</p>
                                 <p>课时：64</p>
                                 <p>
@@ -114,7 +115,7 @@
                             <div class="thumbnail">
                                 <img src="http://www.abilix.com/images/hdzx/tixi/3_24.png">
                                 <h5>能力训练课程(AO1)</h5>
-                                <p>四年级至初三</p>
+                                <p>适合人群:四年级至初三</p>
                                 <p>WER比赛项目：积木机器人赛（I）</p>
                                 <p>课时：64</p>
                                 <p>
@@ -127,7 +128,7 @@
                             <div class="thumbnail">
                                 <img src="http://www.abilix.com/images/hdzx/tixi/3_26.png">
                                 <h5>能力训练课程(AO2)</h5>
-                                <p>AO1毕业生</p>
+                                <p>适合人群:AO1毕业生</p>
                                 <p>WER比赛项目：积木机器人赛（II）移动机器人赛（II）</p>
                                 <p>课时：64</p>
                                 <p>
