@@ -1,0 +1,26 @@
+.main-right>.main-right-top .media .media-left a{
+    display:block;
+    width:270px !important;
+    height:190px !important;
+}
+.media-body{
+    text-align:left;
+    padding-top:20px;
+}
+.media-body-top>p{
+    float:left;
+    width:50%
+}
+.media-body-mid>p{
+    float:left;
+    width:50%
+}
+#home{
+    padding-top:30px;
+}
+#profile{
+    padding-top:30px;
+}
+#messages{
+    padding-top:30px;
+}

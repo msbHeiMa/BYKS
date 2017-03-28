@@ -1,0 +1,91 @@
+.border-left-biaoti{
+    width:100%;
+    background-color: #fff;
+    height:30px;
+    text-align:left;
+    border-left:#e70c1d 2px solid;
+    padding-left:10px;
+    padding-top: 1px;
+    line-height: 30px;
+}
+.border-top-biaoti{
+    width:100%;
+    background-color: #fff;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    border-top:#e70c1d 2px solid;
+}
+.jieshao{
+    text-align: left;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+.jieshao span{
+    display:inline-block;
+}
+.biaoti{
+    width:70px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.main-right-mid>.pinglun{
+    width:100%;
+    background-color: #fff;
+    margin-top:15px;
+    margin-bottom:15px;
+    padding-bottom:5px;
+}
+.pinglun-top{
+    overflow:hidden;
+    height:40px;
+    padding-left:5px;
+}
+.main-right-mid>.pinglun img{
+    width:40px;
+    height:40px;
+    float:left;
+    border-radius:50%;
+}
+.pinglun-top>h6{
+    float:left;
+    padding:5px 10px 5px 10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-top: 8px;
+    margin-left:5px;
+}
+.pinglun-top>span{
+    float:right;
+    border:1px solid #ccc;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+.pinglun-bottom{
+    border:1px solid #ccc;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    text-align: left;
+    margin-left:50px;
+    margin-right:10px;
+}
+textarea{
+    width:100%;
+    height:70px;
+    max-height:70px;
+    max-width:100%;
+    border:1px solid #ccc;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px;
+    margin-top:15px;
+    resize: none !important;
+}

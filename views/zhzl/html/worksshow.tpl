@@ -34,10 +34,10 @@
 		<div class="main">
 			<div class="main-left">
 				<ul>
-					<li><a href="#">上传作品</a></li>
+					<li><a href="sczp.tpl">上传作品</a></li>
 					<li><a href="#">了解机器人</a></li>
 					<li><a href="#">了解课程</a></li>
-					<li><a href="#">查看大家作品</a></li>
+					<li><a href="worksshow.html">查看大家作品</a></li>
 					<li><a href="#">关注热点</a></li>
 					<li><a href="#">联系我们</a></li>
 				</ul>
@@ -49,6 +49,7 @@
 						<button type="button" class="button button-pill button-action">积木类型</button>
 						<button type="button" class="button button-pill button-action">变形金刚</button>
 						<button type="button" class="button button-pill button-action">星际争霸</button>
+						<button type="button" class="button button-pill button-action">其他类型</button>
 					</div>
 					<div class="media">
 						<div class="media-left">
@@ -86,47 +87,7 @@
 							<p>内容介绍:<span>啊说过的哈的数据发到手机发；饿哦我就i啊撒旦解放；的撒娇覅官方；哦好的撒啊；上的飞机</span></p>
 							<div>
 								<a href="#" class="button button-glow button-rounded button-royal">点赞</a>
-								<a href="#" class="button button-glow button-rounded button-highlight">评论</a>
-							</div>
-						</div>
-					</div>
-					<div class="media">
-						<div class="media-left">
-							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-								<div class="carousel-inner" role="listbox">
-									<div class="item active">
-										<a href="#">
-											<img src="../../../zhzl/lcgl/images/43.jpg">
-										</a>
-									</div>
-									<div class="item">
-										<a href="#">
-											<img src="../../../zhzl/lcgl/images/44.jpg">
-										</a>
-									</div>
-									<div class="item">
-										<a href="#">
-											<img src="../../../zhzl/lcgl/images/45.jpg">
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="media-body">
-							<h4 class="media-heading">发表人:<span>马帅彬</span></h4>
-							<div class="media-body-top">
-								<p>发表时间:<span>2017年3月19日</span></p>
-								<p>作品名称:<span>乐高机器人</span></p>
-							</div>
-							<div class="media-body-mid">
-								<p>作品类型:<span>积木类型</span></p>
-								<p>点赞次数:<span>0</span></p>
-							</div>
-
-							<p>内容介绍:<span>啊说过的哈的数据发到手机发；饿哦我就i啊撒旦解放；的撒娇覅官方；哦好的撒啊；上的飞机</span></p>
-							<div>
-								<a href="#" class="button button-glow button-rounded button-royal">点赞</a>
-								<a href="#" class="button button-glow button-rounded button-highlight">评论</a>
+								<a href="worksdetail.html" class="button button-glow button-rounded button-highlight">评论</a>
 							</div>
 						</div>
 					</div>
@@ -166,7 +127,7 @@
 							<p>内容介绍:<span>啊说过的哈的数据发到手机发；饿哦我就i啊撒旦解放；的撒娇覅官方；哦好的撒啊；上的飞机</span></p>
 							<div>
 								<a href="#" class="button button-glow button-rounded button-royal">点赞</a>
-								<a href="#" class="button button-glow button-rounded button-highlight">评论</a>
+								<a href="worksdetail.html" class="button button-glow button-rounded button-highlight">评论</a>
 							</div>
 						</div>
 					</div>
@@ -206,7 +167,47 @@
 							<p>内容介绍:<span>啊说过的哈的数据发到手机发；饿哦我就i啊撒旦解放；的撒娇覅官方；哦好的撒啊；上的飞机</span></p>
 							<div>
 								<a href="#" class="button button-glow button-rounded button-royal">点赞</a>
-								<a href="#" class="button button-glow button-rounded button-highlight">评论</a>
+								<a href="worksdetail.html" class="button button-glow button-rounded button-highlight">评论</a>
+							</div>
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left">
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+								<div class="carousel-inner" role="listbox">
+									<div class="item active">
+										<a href="#">
+											<img src="../../../zhzl/lcgl/images/43.jpg">
+										</a>
+									</div>
+									<div class="item">
+										<a href="#">
+											<img src="../../../zhzl/lcgl/images/44.jpg">
+										</a>
+									</div>
+									<div class="item">
+										<a href="#">
+											<img src="../../../zhzl/lcgl/images/45.jpg">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">发表人:<span>马帅彬</span></h4>
+							<div class="media-body-top">
+								<p>发表时间:<span>2017年3月19日</span></p>
+								<p>作品名称:<span>乐高机器人</span></p>
+							</div>
+							<div class="media-body-mid">
+								<p>作品类型:<span>积木类型</span></p>
+								<p>点赞次数:<span>0</span></p>
+							</div>
+
+							<p>内容介绍:<span>啊说过的哈的数据发到手机发；饿哦我就i啊撒旦解放；的撒娇覅官方；哦好的撒啊；上的飞机</span></p>
+							<div>
+								<a href="#" class="button button-glow button-rounded button-royal">点赞</a>
+								<a href="worksdetail.html" class="button button-glow button-rounded button-highlight">评论</a>
 							</div>
 						</div>
 					</div>
