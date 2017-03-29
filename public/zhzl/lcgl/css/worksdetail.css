@@ -62,12 +62,14 @@
 .pinglun-top>span{
     float:right;
     border:1px solid #ccc;
-    padding:5px 10px 5px 10px;
+    padding:0 10px;
     border-radius: 5px;
     background-color: #f0f0f0;
     text-align: center;
     margin-top: 8px;
     margin-right: 10px;
+    height:25px;
+    line-height:25px;
 }
 .pinglun-bottom{
     border:1px solid #ccc;

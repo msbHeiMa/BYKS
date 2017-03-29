@@ -24,3 +24,15 @@
 #messages{
     padding-top:30px;
 }
+#messages img{
+    width:215px;
+    height:146px !important;
+}
+#profile img{
+    width:215px;
+    height:146px !important;
+}
+#home img{
+    width:270px;
+    height:180px !important;
+}

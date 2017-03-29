@@ -139,11 +139,22 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_09.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_09.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/47.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/48.jpg">
+													</div>
+												</div>
+											</div>
 											<div class="caption">
 												<h4>能力训练课程(AY1)</h4>
 												<p>适合人群:大班至三年级</p>
-												<p>WER比赛项目：积木机器人赛（I）</p>
 												<p>课时：48</p>
 												<p>
 													<a href="#" class="button button-action   button-pill button-jumbo button-small" role="button">课程安排</a>
@@ -154,10 +165,21 @@
 									</div>
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_11.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_11.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/45.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/46.jpg">
+													</div>
+												</div>
+											</div>
 											<h4>能力训练课程(AY2)</h4>
 											<p>适合人群:AY1毕业生</p>
-											<p>WER比赛项目：积木机器人赛（II），移动机器人赛（II）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-action   button-pill button-jumbo button-small" role="button">课程安排</a>
@@ -167,10 +189,21 @@
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_13.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_13.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/50.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/51.jpg">
+													</div>
+												</div>
+											</div>
 											<h5>能力训练课程(AY3)</h5>
 											<p>适合人群:AY2毕业生</p>
-											<p>WER比赛项目：积木机器人赛（III），模块机器人赛（I）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-action   button-pill button-jumbo button-small" role="button">课程安排</a>
@@ -182,10 +215,21 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-6">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_15.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_15.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/43.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/44.jpg">
+													</div>
+												</div>
+											</div>
 											<h5>能力训练课程(AY4)</h5>
 											<p>适合人群:AY3毕业生</p>
-											<p>WER比赛项目：类人机器人赛（I），模块机器人赛（II），飞行机器人赛（I）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-action   button-pill button-jumbo button-small" role="button">课程安排</a>
@@ -195,10 +239,21 @@
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_24.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_24.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/46.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/47.jpg">
+													</div>
+												</div>
+											</div>
 											<h5>能力训练课程(AO1)</h5>
 											<p>适合人群:四年级至初三</p>
-											<p>WER比赛项目：积木机器人赛（I）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-action   button-pill button-jumbo button-small" role="button">课程安排</a>
@@ -208,10 +263,21 @@
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_26.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_26.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/50.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/51.jpg">
+													</div>
+												</div>
+											</div>
 											<h5>能力训练课程(AO2)</h5>
 											<p>适合人群:AO1毕业生</p>
-											<p>WER比赛项目：积木机器人赛（II）移动机器人赛（II）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-action   button-pill button-jumbo button-small" role="button">课程安排</a>
@@ -226,11 +292,22 @@
 									<div class="row">
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_09.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_26.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/50.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/51.jpg">
+													</div>
+												</div>
+											</div>
 											<div class="caption">
 												<h4>能力训练课程(AY1)</h4>
 												<p>适合人群:大班至三年级</p>
-												<p>WER比赛项目：积木机器人赛（I）</p>
 												<p>课时：48</p>
 												<p>
 													<a href="#" class="button button-highlight  button-pill button-jumbo button-small" role="button">报名课程</a>
@@ -241,10 +318,21 @@
 									</div>
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_11.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_24.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/46.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/47.jpg">
+													</div>
+												</div>
+											</div>
 											<h4>能力训练课程(AY2)</h4>
 											<p>适合人群:AY1毕业生</p>
-											<p>WER比赛项目：积木机器人赛（II），移动机器人赛（II）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-highlight  button-pill button-jumbo button-small" role="button">报名课程</a>
@@ -254,10 +342,21 @@
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_13.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_15.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/43.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/44.jpg">
+													</div>
+												</div>
+											</div>
 											<h5>能力训练课程(AY3)</h5>
 											<p>适合人群:AY2毕业生</p>
-											<p>WER比赛项目：积木机器人赛（III），模块机器人赛（I）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-highlight  button-pill button-jumbo button-small" role="button">报名课程</a>
@@ -269,10 +368,21 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-6">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_15.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_13.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/50.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/51.jpg">
+													</div>
+												</div>
+											</div>
 											<h5>能力训练课程(AY4)</h5>
 											<p>适合人群:AY3毕业生</p>
-											<p>WER比赛项目：类人机器人赛（I），模块机器人赛（II），飞行机器人赛（I）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-highlight  button-pill button-jumbo button-small" role="button">报名课程</a>
@@ -282,10 +392,21 @@
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_24.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_11.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/45.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/46.jpg">
+													</div>
+												</div>
+											</div>
 											<h5>能力训练课程(AO1)</h5>
 											<p>适合人群:四年级至初三</p>
-											<p>WER比赛项目：积木机器人赛（I）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-highlight  button-pill button-jumbo button-small" role="button">报名课程</a>
@@ -295,10 +416,21 @@
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<div class="thumbnail">
-											<img src="http://www.abilix.com/images/hdzx/tixi/3_26.png">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+												<div class="carousel-inner" role="listbox">
+													<div class="item active">
+														<img src="http://www.abilix.com/images/hdzx/tixi/3_09.png">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/47.jpg">
+													</div>
+													<div class="item">
+														<img src="../../../zhzl/lcgl/images/48.jpg">
+													</div>
+												</div>
+											</div>
 											<h5>能力训练课程(AO2)</h5>
 											<p>适合人群:AO1毕业生</p>
-											<p>WER比赛项目：积木机器人赛（II）移动机器人赛（II）</p>
 											<p>课时：64</p>
 											<p>
 												<a href="#" class="button button-highlight  button-pill button-jumbo button-small" role="button">报名课程</a>
