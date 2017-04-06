@@ -48,168 +48,14 @@
                     <div class="border-left-biaoti">
                         <h4>课程特色</h4>
                     </div>
-                    <img src="http://zhaoshang.abilixschool.com/application/views/images/course.jpg">
+                    <img src="../../../zhzl/lcgl/images/course.jpg">
                 </div>
                 <div class="main-right-mid">
                     <div class="border-left-biaoti">
                         <h4>课程体系</h4>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
-                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="item active">
-                                            <img src="http://www.abilix.com/images/hdzx/tixi/3_09.png">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/47.jpg">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/48.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="caption">
-                                    <h4>能力训练课程(AY1)</h4>
-                                    <p>适合人群:大班至三年级</p>
-                                    <p>课时：48</p>
-                                    <p>
-                                        <a href="#" class="button button-raised button-primary button-pill" role="button">报名</a>
-                                        <a href="#" class="button button-raised button-default button-pill" role="button">关注</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
-                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="item active">
-                                            <img src="http://www.abilix.com/images/hdzx/tixi/3_11.png">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/45.jpg">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/46.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <h4>能力训练课程(AY2)</h4>
-                                <p>适合人群:AY1毕业生</p>
-                                <p>课时：64</p>
-                                <p>
-                                    <a href="#" class="button button-raised button-primary button-pill" role="button">报名</a>
-                                    <a href="#" class="button button-raised button-default button-pill" role="button">关注</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="thumbnail">
-                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="item active">
-                                            <img src="http://www.abilix.com/images/hdzx/tixi/3_13.png">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/50.jpg">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/51.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <h5>能力训练课程(AY3)</h5>
-                                <p>适合人群:AY2毕业生</p>
-                                <p>课时：64</p>
-                                <p>
-                                    <a href="#" class="button button-raised button-primary button-pill" role="button">报名</a>
-                                    <a href="#" class="button button-raised button-default button-pill" role="button">关注</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="thumbnail">
-                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="item active">
-                                            <img src="http://www.abilix.com/images/hdzx/tixi/3_15.png">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/43.jpg">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/44.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <h5>能力训练课程(AY4)</h5>
-                                <p>适合人群:AY3毕业生</p>
-                                <p>课时：64</p>
-                                <p>
-                                    <a href="#" class="button button-raised button-primary button-pill" role="button">报名</a>
-                                    <a href="#" class="button button-raised button-default button-pill" role="button">关注</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="thumbnail">
-                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="item active">
-                                            <img src="http://www.abilix.com/images/hdzx/tixi/3_24.png">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/46.jpg">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/47.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <h5>能力训练课程(AO1)</h5>
-                                <p>适合人群:四年级至初三</p>
-                                <p>课时：64</p>
-                                <p>
-                                    <a href="#" class="button button-raised button-primary button-pill" role="button">报名</a>
-                                    <a href="#" class="button button-raised button-default button-pill" role="button">关注</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="thumbnail">
-                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="item active">
-                                            <img src="http://www.abilix.com/images/hdzx/tixi/3_26.png">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/50.jpg">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../../../zhzl/lcgl/images/51.jpg">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <h5>能力训练课程(AO2)</h5>
-                                <p>适合人群:AO1毕业生</p>
-                                <p>课时：64</p>
-                                <p>
-                                    <a href="#" class="button button-raised button-primary button-pill" role="button">报名</a>
-                                    <a href="#" class="button button-raised button-default button-pill" role="button">关注</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <!--vue.js框架自定义标签-->
+                    <byks-kecheng  :row="row"></byks-kecheng>
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li>
@@ -242,6 +88,7 @@
     </div>
     <script src="../../../components/jquery/dist/jquery.min.js"></script>
     <script src="../../../components/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="../../../components/vue/dist/vue.js"></script>
     <script type="text/javascript" src="../../../zhzl/lcgl/js/Enrolmentcourses.js"></script>
     <script>
 		$('.carousel').carousel();

@@ -17,7 +17,7 @@
 <body class="skin-blue sidebar-mini">
     
     <div id="main"> 
-        <byks-kecheng :row="row"></byks-kecheng>
+        <byks-kecheng  :row="row"></byks-kecheng>
     </div>    
     <script src="../../../components/jquery/dist/jquery.min.js"></script>
     <script src="../../../components/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
