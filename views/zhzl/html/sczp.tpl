@@ -92,7 +92,8 @@
                         <h4>操作</h4>
                     </div>
                     <div class="caozuo">
-                        <a href="#" class="button button-glow button-rounded button-royal">上传作品</a>
+                        <button type="button" id="fileSubmit" class="upload_submit_btn button button-glow button-rounded button-royal">上传作品</button>
+                        <!--<a href="#" class="button button-glow button-rounded button-royal">上传作品</a>-->
                         <a href="index.html" class="button button-glow button-rounded button-highlight">暂不上传</a>
                     </div>
                 </div>

@@ -320,30 +320,15 @@
 					<div id="someTab">
 						<ul class="nav nav-tabs" role="tablist">
 							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">机器人教育历史</a></li>
-							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">机器人教育现状</a></li>
-							<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">机器人教育未来</a></li>
+							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" onclick=xianzhuang()>机器人教育现状</a></li>
+							<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" onclick=weilai()>机器人教育未来</a></li>
 						</ul>
 						<div class="tab-content">
-							<div role="tabpanel" class="tab-pane active" id="home">
-								在国外，机器人教育一直是个热点：早在1994年麻省理工学院（MIT）就设立了 “设计和建造LEGO机器人”课程(Martin)，目的是提高工程设计专业学生的设计和创造能力，尝试机器人教育与理科实验的整合；麻省理工学院媒体实验室“终身幼儿园”项目小组开发了各种教学工具，通过与著名积木玩具商乐高公司的紧密合作，该项目组开发出可编程的乐高玩具，帮孩子们学会在数字时代怎样进行设计活动。同时，国外的一些智能机器人实验室也有相应的机器人教育研究的内容。
-								日本,美国等一些发达国家高度重视机器人学科教育对高科技社会的作用和影响,已在信息技术课与课外科技活动开设了有关机器人的课程内容。 自1992年开始,美国政府有关部门在全国高中生中推行“感知和认知移动机器人”计划,高中生可免费获得70公斤重的一套零件,自行组装成遥控机器人,然后可参加有关的比赛。
-								日本发展机器人起步比号称“现代机器人故乡”的美国晚了十年,但是在机器人产业化发展道路上,已经走在了欧美国家的前面。这跟日本高度重视机器人教育和机器人文化的普及是分不开的。在日本,每所大学都有高水平的机器人研究和教学内容,每年定期举行各种不同层次的机器人设计和制作大赛,既有国际性高水平比赛,也有社区性中小学生参加的比赛。
-								新加坡国立教育学院(NIE)和乐高教育部于2006年6月在新加坡举办了第一届亚太ROBOLAB国际教育研讨会，通过专题报告、论文交流和动手制作等方式，就机器人教育及其在科技、数学课程里的应用进行交流，以提高教师们开展机器人教育的科技水平与应用能力。
+							<div role="tabpanel" class="tab-pane active" id="home">								
 							</div>
 							<div role="tabpanel" class="tab-pane" id="profile">
-								机器人这个看似高深的类人智能电子产品正在走进课堂，走向大众教育。机器人进入教育仍然面临着许多问题。比如，机器人就像我们平时在电影上看到的机器人吗？机器人教育就是把机器人当玩具吗？机器人教育就是学习编程序吗？的确，机器人教育还是一个新鲜事物，还有需要期待发展、完善的地方，我们须要周全地考虑，促进它的健康成长。
-								机器人进入教育，具有“五种类型” 机器人的发明、研究及应用实践是以科学研究和社会生产为需求的，进入到教育是其领域的扩大与发展。但是，由于它所涉及知识的广泛性和涉及技术的综合性，这都使的机器人对教育而言具有更多的价值。根据有关机器人教育专家的研究与实践，机器人对于教育的应用可以分为五种类型。
-								第一种方式，机器人学科教学（Robot Subject Instruction，简称RSI） 第二种方式，机器人辅助教学（Robot-Assisted Instruction，简称RAI） 第三种方式，机器人管理教学（Robot-Managed
-								Instruction，简称RMI） 第四种方式，机器人代理（师生）事务（Robot-Represented Routine，简称RRR） 第五种方式， 机器人主持教学（Robot-Directed Instruction，简称RDI）
 							</div>
 							<div role="tabpanel" class="tab-pane" id="messages">
-								2016年9月10日，北京师范大学智慧学习研究院在2016国际服务机器人产业高峰论坛上正式发布《2016全球教育机器人发展白皮书》（下称《白皮书》）。这是目前全球范围内首次由教育权威机构针对教育机器人领域基于详实调研数据发布的首部白皮书。 《白皮书》通过深入探讨教育机器人发展的相关资料，全面梳理了全球教育机器人发展现状与趋势。从教育机器人的全球重要研究机构、市场产品评测、需求调研、产业链分析及未来市场发展预测，进行全方位阐述。《白皮书》的发布对推进智慧学习发展、智慧城市建设，具有积极促进作用；对教育机器人研究机构和相关企业未来规划与布局，具有极为重要的参考价值。
-								《白皮书》诠释教育机器人未来发展趋势 《白皮书》由北京师范大学智慧学习研究院牵头立项、实施，联合来自研究机构、行业专家、和企业等近20位专家和学者共同完成。《白皮书》采用专家访谈、问卷调查以及文献分析等研究方法，归纳出针对幼儿、小学、中学、大学、成人与老人六大不同年龄层群体于短期、中期、长期的教育机器人需求，其中机器人教育、语言教育以及特殊教育为共同核心需求。
-								此外，《白皮书》整理近十年教育机器人相关学术文献，梳理出教育机器人全球重要研究机构与研究领域。并针对全球教育机器人关注度高的市场产品，以市场分析框架梳理出全球十二类教育机器人产品，以应用产品分析框架进行产品评测，全方位呈现了教育机器人的应用情境。
-								图为：北京师范大学智慧学习研究院联席院长黄荣怀教授详细讲解教育机器人产业未来发展的趋势。 在发布会上，北京师范大学智慧学习研究院联席院长黄荣怀教授代表项目团队，介绍了《2016教育机器人白皮书》的研究背景、过程及十大主要观点。
-								教育机器人引领智慧学习新风尚 伴随着互联网技术不断发展，教育信息化的内涵也在发生变化，如何利用新技术为教师提供强有力的教学帮助，调动学生积极性，是智慧学习研究院始终在思考的问题。 2015年10月26日，北师大智慧学习研究院新设的两个研究机构——“教育机器人工程中心”及“信息化教学研究中心”在网龙长乐园区挂牌，与网龙及其教育业务品牌——华渔深入合作，充分发挥北师大科研队伍优势以及网龙华渔教育在资金、移动互联网、大数据、云计算及产品研发等领域的技术优势。在双方优势互补下，将在算法改进、教学方法研究、教育资源汇总等多个方面，对教育机器人的研发提供强有力的支持。
-								通过研发教育机器人，传统教学中的学科限制将逐渐被打破，教师将真正摆脱“知识搬运工”的角色，回归到“授业解惑”的教育本质中。北师大智慧学习研究院正在描绘一幅以“互联网+”推动传统教育模式革新的画卷，并坚信通过智能技术的发展，能够带动传统教育模式的革新蜕变，推进智慧学习的发展，促进智慧城市的建设。
-								未来5年全球市场规模或达百亿美元
 							</div>
 						</div>
 
@@ -358,12 +343,267 @@
 	</div>
 	<script src="../../../components/jquery/dist/jquery.min.js"></script>
 	<script src="../../../components/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	<script src="../../../components/ichartjs/ichart.1.2.min.js"></script>
 	<script type="text/javascript" src="../../../zhzl/lcgl/js/index.js"></script>
 	<script>
 		$('.carousel').carousel();
 		$('#someTab').tab('show')
 	</script>
-
+    <script>
+	    var url="http://localhost:3002";
+		$(function(){
+			var data=[];
+			$.ajax({
+                url:url+"/byks/getTuBiao?type=LISHI",  
+                type: "get",
+                success: function(res){
+                        data=res.data
+						var chart = new iChart.Pie3D({
+							render : 'home',
+							data: data,
+							title : {
+								text : '机器人教育行业历史数据',
+								height:40,
+								fontsize : 30,
+								color : '#282828'
+							},
+							sub_option : {
+								mini_label_threshold_angle : 40,//迷你label的阀值,单位:角度
+								mini_label:{//迷你label配置项
+									fontsize:20,
+									fontweight:600,
+									color : '#ffffff'
+								},
+								label : {
+									background_color:null,
+									sign:false,//设置禁用label的小图标
+									padding:'0 4',
+									border:{
+										enable:false,
+										color:'#666666'
+									},
+									fontsize:11,
+									fontweight:600,
+									color : '#4572a7'
+								},
+								border : {
+									width : 2,
+									color : '#ffffff'
+								},
+								listeners:{
+									parseText:function(d, t){
+										return d.get('value')+"%";//自定义label文本
+									}
+								} 
+							},
+							legend:{
+								enable:true,
+								padding:0,
+								offsetx:120,
+								offsety:50,
+								color:'#3e576f',
+								fontsize:20,//文本大小
+								sign_size:20,//小图标大小
+								line_height:28,//设置行高
+								sign_space:10,//小图标与文本间距
+								border:false,
+								align:'left',
+								background_color : null//透明背景
+							},
+							animation : true,//开启过渡动画
+							animation_duration:800,//800ms完成动画 
+							shadow : true,
+							shadow_blur : 6,
+							shadow_color : '#aaaaaa',
+							shadow_offsetx : 0,
+							shadow_offsety : 0,
+							background_color:'#f1f1f1',
+							align:'right',//右对齐
+							offsetx:-100,//设置向x轴负方向偏移位置60px
+							offset_angle:-90,//逆时针偏移120度
+							width : 800,
+							height : 400,
+							radius:150
+						});
+						//利用自定义组件构造右侧说明文本
+						chart.plugin(new iChart.Custom({
+								drawFn:function(){
+									//在右侧的位置，渲染说明文字
+									chart.target.textAlign('start')
+									.textBaseline('top')
+									.textFont('600 20px Verdana')
+									.fillText('数据统计:\n近几年数据\n概念图',120,80,false,'#be5985',false,24)
+									.textFont('600 12px Verdana')
+									.fillText('统计区间,2012-2016',120,160,false,'#999999');
+								}
+						}));
+						
+						chart.draw();
+                },
+                error:function(){},
+                });
+			
+		});
+		function xianzhuang(){
+			$(function() {
+				$.ajax({
+                url:url+"/byks/getTuBiao?type=XIANZHUANG",  
+                type: "get",
+                success: function(res){
+					data=res.data
+					var chart = new iChart.Column2D({
+					render : 'profile',
+					data : data,
+					title : {
+						text : '2017年个别月份收入占比统计',
+						color : '#3e576f'
+					},
+					subtitle : {
+						text : '模拟数据',
+						color : '#6d869f'
+					},
+					width : 800,
+					height : 400,
+					label : {
+						fontsize:11,
+						color : '#666666'
+					},
+					animation : true,//开启过渡动画
+					animation_duration:800,//800ms完成动画
+					shadow : true,
+					shadow_blur : 2,
+					shadow_color : '#aaaaaa',
+					shadow_offsetx : 1,
+					shadow_offsety : 0,
+					column_width : 62,
+					sub_option : {
+						listeners : {
+							parseText : function(r, t) {
+								return t + "%";
+							}
+						},
+						label : {
+							fontsize:11,
+							fontweight:600,
+							color : '#4572a7'
+						},
+						border : {
+							width : 2,
+							color : '#ffffff'
+						}
+					},
+					coordinate : {
+						background_color : null,
+						grid_color : '#c0c0c0',
+						width : 680,
+						axis : {
+							color : '#c0d0e0',
+							width : [0, 0, 1, 0]
+						},
+						scale : [{
+							position : 'left',
+							start_scale : 0,
+							end_scale : 60,
+							scale_space : 10,
+							scale_enable : false,
+							label : {
+								fontsize:11,
+								color : '#666666'
+							}
+						}]
+					}
+				 });			
+				
+					chart.plugin(new iChart.Custom({
+							drawFn:function(){
+								/**
+								 *计算位置
+								*/	
+								var coo = chart.getCoordinate(),
+									x = coo.get('originx'),
+									y = coo.get('originy'),
+									H = coo.height;
+								/**
+								 *在左侧的位置，设置逆时针90度的旋转，渲染文字。
+								*/
+								chart.target.textAlign('center')
+								.textBaseline('middle')
+								.textFont('600 13px Verdana')
+								.fillText('百分比制度',x-40,y+H/2,false,'#6d869f', false,false,false,-90);
+								
+							}
+					}));
+					chart.draw();
+				},
+                error:function(){},
+                });
+				
+				
+			});
+		};
+		function weilai(){
+			$(function(){
+				$.ajax({
+                url:url+"/byks/getTuBiao?type=WEILAI",  
+                type: "get",
+                success: function(res){
+					data=res.data;
+					var chart = new iChart.Donut2D({
+						render : 'messages',
+						data: data,
+						title : {
+							text : '预测未来一年12个月份收入占比统计(预计总产值可达10个亿)',
+							color : '#3e576f'
+						},
+						center : {
+							text:'100%',
+							color:'#3e576f',
+							shadow:true,
+							shadow_blur : 2,
+							shadow_color : '#557797',
+							shadow_offsetx : 0,
+							shadow_offsety : 0,
+							fontsize : 40
+						},
+						sub_option : {
+							label : {
+								background_color:null,
+								sign:false,//设置禁用label的小图标
+								padding:'0 4',
+								border:{
+									enable:false,
+									color:'#666666'
+								},
+								fontsize:11,
+								fontweight:600,
+								color : '#4572a7'
+							},
+							border : {
+								width : 2,
+								color : '#ffffff'
+							}
+						},
+						shadow : true,
+						shadow_blur : 6,
+						shadow_color : '#aaaaaa',
+						shadow_offsetx : 0,
+						shadow_offsety : 0,
+						background_color:'#fefefe',
+						offset_angle:-120,//逆时针偏移120度
+						showpercent:true,
+						decimalsnum:2,
+						width : 800,
+						height : 400,
+						radius:120
+					});
+					chart.draw();
+				},
+                error:function(){},
+                });
+				
+			});
+		}
+	</script>
 </body>
 
 </html>

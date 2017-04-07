@@ -60,3 +60,7 @@
     overflow:hidden;
     width:100%;
 }
+.tab-content>div{
+    margin-top:15px;
+    margin-bottom:15px;
+}
