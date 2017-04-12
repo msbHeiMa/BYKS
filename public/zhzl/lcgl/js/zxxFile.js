@@ -78,6 +78,8 @@ var ZXXFILE = {
 		for (var i = 0, file; file = this.fileFilter[i]; i++) {
 			(function(file) {
 				var xhr = new XMLHttpRequest();
+				// 自己添加
+				var url="../../../zhzl/lcgl/js/file_upload.php";
 				if (xhr.upload) {
 					// 上传中
 					xhr.upload.addEventListener("progress", function(e) {
@@ -101,7 +103,9 @@ var ZXXFILE = {
 					};
 		
 					// 开始上传
-					xhr.open("POST", self.url, true);
+					// xhr.open("POST", self.url, true);
+					// 自己添加
+					xhr.open("POST",url, true);
 					xhr.setRequestHeader("X_FILENAME", encodeURIComponent(file.name));
 					xhr.send(file);
 				}	

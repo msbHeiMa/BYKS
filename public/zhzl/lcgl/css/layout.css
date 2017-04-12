@@ -33,7 +33,7 @@ h3{
 }
 .daohang>li{
     float:left;
-    width:13%;
+    width:12%;
     height:70px;
     text-align:center;
     line-height: 70px;
@@ -84,6 +84,9 @@ h3{
 .main-left>ul>li>a:hover{
     background-color:#8bc220;
 }
+.nav-main-left{
+    background-color:#8bc220;
+}
 .main-right{
     width:80%;
     padding-left:10px;
@@ -99,7 +102,4 @@ h3{
     background-color: #333;
     color:#fff;
     text-align: center;
-}
-.username{
-    width:8%;
 }

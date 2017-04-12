@@ -30,7 +30,14 @@
             
             methods: {
                 baoming:function(){
-                    alert("报名成功")
+                   art.dialog({
+                        title: '欢迎',
+                        content: '欢迎使用artDialog对话框组件！',
+                        ok: function () {
+                            this.close()
+                        }
+                    });
+
                 },
                 guanzhu:function(){
                     alert("关注成功")
