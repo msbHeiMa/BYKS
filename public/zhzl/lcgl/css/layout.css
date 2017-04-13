@@ -22,7 +22,9 @@ h3{
     height:70px;
     width:100%;
     border-bottom:#00FF7F 2px solid; 
-    /*position: fixed;*/
+    position: fixed;
+    background-color: #fff;
+    z-index: 100;
 }
 
 .daohang{
@@ -79,10 +81,12 @@ h3{
     overflow:hidden;
     text-align: -webkit-center;
     background-color: #f0f0f0;
+    min-height:500px;
+    margin-top:70px;
 }
 .main{
     width:90%;
-    overflow:hidden;
+    overflow:hidden; 
 }
 .main-left{
     width:20%;

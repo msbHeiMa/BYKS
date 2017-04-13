@@ -26,6 +26,7 @@ var main = new Vue({
             //获取Cookie内储存的用户数据用来进行判断
             var cookieUserName=this.getCookie("userName");
             var cookiePassWord=this.getCookie("passWord");
+            //当本地的Cookie没有用户信息时才发出请求
             if(cookieUserName==""&&cookiePassWord==""){
                 $.ajax({
                     url:url+"/byks/login",  
@@ -83,6 +84,7 @@ var main = new Vue({
                         });
                     },
                 });
+            //验证是否已经登陆还要重复登陆
             }else if(cookieUserName!=""&&cookiePassWord!=""&&cookieUserName==userName&&cookiePassWord==passWord){
                 art.dialog({
                     title:'登录信息',
@@ -94,6 +96,7 @@ var main = new Vue({
                         this.close()
                     }
                 });
+            //验证是否已登陆还想要登陆其他账号
             }else{
                 art.dialog({
                     title:'登录信息',
