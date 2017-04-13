@@ -48,6 +48,30 @@ h3{
     color:#fff;
     background-color:#8bc220;
 }
+.daohang>li .userImage:hover{
+    color:#fff;
+    background-color:#fff;
+}
+.daohang .username>b>a{
+    display: block;
+    width:100%;
+    height:40px;
+
+}
+.daohang .username img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    border-radius: 50%;
+    margin-left:56.5px;
+}
+.daohang .username>span{
+    display:block;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+}
 #main{
     padding-top:15px;
     width:100%;

@@ -11,7 +11,14 @@
 			<li><a href="worksshow.html">作品展示</a></li>
 			<li><a href="Mymanagement.html">我的管理</a></li>
 			<li><a href="login.html">登陆/注册</a></li>
-			<li class="username"><span>欢迎马帅彬回来</span></li>
+			<li class="username" > 
+				<b>
+					<a href="login.html" class="userImage">
+						<img src="../../../zhzl/lcgl/images/admin.jpg">
+					</a>
+				</b>
+				<span><span class="welcome">欢迎登陆</span> <a href="javescript:viod(0)" class="logout" @click="logout"></a></span>
+			</li>
 		</ul>
 
 	</div>

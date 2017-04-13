@@ -27,14 +27,14 @@
 							<div role="tabpanel" class="tab-pane active" id="landing">
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon1">用户名</span>
-									<input type="text" class="form-control" placeholder="请输入您的用户名" aria-describedby="basic-addon1">
+									<input type="text" class="form-control" placeholder="请输入您的用户名" aria-describedby="basic-addon1" v-model="userData.userName">
 								</div>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon2">密&nbsp&nbsp&nbsp码</span>
-									<input type="password" class="form-control" placeholder="请输入您的密码" aria-describedby="basic-addon2">
+									<input type="password" class="form-control" placeholder="请输入您的密码" aria-describedby="basic-addon2" v-model="userData.passWord">
 								</div>
 								<div class="input-group">
-									<a href="#" class="button button-action   button-rounded button-jumbo button-small" role="button">马上登陆</a>
+									<a href="javascript:void(0)" class="button button-action   button-rounded button-jumbo button-small" role="button" @click="login">马上登陆</a>
 								</div>	
 							</div>
 							<!--开始注册-->

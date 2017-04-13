@@ -34,7 +34,7 @@
                         title: '欢迎',
                         content: '欢迎使用artDialog对话框组件！',
                         ok: function () {
-                            this.close()
+                           this.close()
                         }
                     });
 
