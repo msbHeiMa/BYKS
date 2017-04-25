@@ -19,6 +19,7 @@
 .media{
     margin-top:0 !important;
     margin-bottom:15px !important;
+    border-bottom: #00FF7F 2px solid;
 }
 .media>a{
     width:180px;
@@ -38,9 +39,12 @@
     text-align:left;
     border-bottom:#00FF7F 2px solid;
 }
+.media-left{
+    padding:0 !important;
+}
 .thumbnail>img{
-    width:290px;
-    height:190px;
+    width:80%;
+    height:200px;
 }
 .main-right-mid{
     float:left;
