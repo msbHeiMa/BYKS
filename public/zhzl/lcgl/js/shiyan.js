@@ -1,73 +1,74 @@
-        Vue.component('byks-kecheng', {
+ Vue.component('byks-ul', {
             template: `
-                    <div class="row">
-                        <div class="col-sm-6 col-md-4" v-for="entry in row">
-                            <div class="thumbnail">
-                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner" role="listbox">
-                                        <div v-for="(col,index) in entry.images" :class="{item:true,active:index==0?true:false}">
-                                            <img :src="col">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="caption" >
-                                    <h4>{{entry.courseName}}</h4>
-                                    <p>适合人群:{{entry.crowd}}</p>
-                                    <p>课时：{{entry.keShi}}</p>
-                                    <p>
-                                        <a href="javascript:void(0)" class="button button-raised button-primary button-pill" role="button" @click="baoming">报名</a>
-                                        <a href="javascript:void(0)" class="button button-raised button-default button-pill" role="button" @click="guanzhu">关注</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`,
+                <div>
+                    <ul v-for="item in row"> 
+                        <li>{{item.id}}</li>
+                        <li>{{item.utterer}}</li>
+                        <li>{{item.fbTime}}</li>
+                        <li>{{item.worksName}}</li>
+                        <li>{{item.worksName}}</li>
+                    </ul>
+                </div>
+                
+                   
+					`,
+            // props: {
+            //     // row:Array,
+            // },
+            props: ["row"]
+ });
+  Vue.component('byks-li', {
+            template: `
+                <div>
+                    <ul v-for="item in row"> 
+                        <li>{{item.id}}</li>
+                        <li>{{item.utterer}}</li>
+                        <li>{{item.fbTime}}</li>
+                        <li>{{item.worksName}}</li>
+                        <li>{{item.worksName}}</li>
+                    </ul>
+                </div>
+                
+                   
+					`,
             props: {
                 data: Array,
                 row:Array,
             },
-            
-            methods: {
-                baoming:function(){
-                    alert("报名成功")
-                },
-                guanzhu:function(){
-                    alert("关注成功")
-                },
-                
-            },
-            
-        })
-        var url="http://localhost:3002";
+ });
         var main = new Vue({
             el: '#main',
-            data:{
-                row:[
-                      
-                    ]
+            data:function(){
+                return{
+                    row:[{
+                        "id":"4",
+                        "utterer":"马帅彬",
+                        "fbTime":"2017-04-25 11:28:33",
+                        "worksName":"乐高机器人",
+                        "worksType":"积木类型",
+                        "likeTime":0,
+                        "worksIntro":"从拿到机器人开始还是一堆零件到一点一点的搭建好，到最终完成充满成就感",
+                        "worksImages":"../../../zhzl/lcgl/images/43.jpg,../../../zhzl/lcgl/images/44.jpg,../../../zhzl/lcgl/images/45.jpg",
+                        "createDate":"2017-04-25 11:29:30",
+                        "updateDate":null
+                    }],
+                    utterer:"马帅彬",
+                }
             },
-            beforeCreate:function(){
-                $.ajax({
-                url:url+"/byks/getAllCourse",  
-                type: "get",
-                success: function(res){
-                    main.row=res.data
-                    for(var i=0;i<res.data.length;i++){
-                        var IMAGES=[];
-                        IMAGES=res.data[i].kcImages.split(','); 
-                        main.row[i].images=IMAGES;
-                    }
-                },
-                error:function(){},
-                });
-            },
-            mounted: function () {
-
-            },
-            methods: {
-
-            },
-            
+            // data:{
+            //     row:{
+            //             "id":"4",
+            //             "utterer":"马帅彬",
+            //             "fbTime":"2017-04-25 11:28:33",
+            //             "worksName":"乐高机器人",
+            //             "worksType":"积木类型",
+            //             "likeTime":0,
+            //             "worksIntro":"从拿到机器人开始还是一堆零件到一点一点的搭建好，到最终完成充满成就感",
+            //             "worksImages":"../../../zhzl/lcgl/images/43.jpg,../../../zhzl/lcgl/images/44.jpg,../../../zhzl/lcgl/images/45.jpg",
+            //             "createDate":"2017-04-25 11:29:30",
+            //             "updateDate":null
+            //         },
+            //    utterer:"马帅彬",
+            // },          
         });
         

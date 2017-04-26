@@ -65,18 +65,9 @@
 					</div>
 					<div class="main-right-redian">
 						<h3>热点推送</h3>
-						<div class="media" v-for="item in redian" >
-							<p>{{ item.rdBiaoTi }}</p>
-							<div class="media-body">
-								<h4 class="media-heading"></h4>
-								<span>{{ item.rdIntro }}</span>
-							</div>
-							<div class="media-left">
-								<a href="#">
-									<img class="media-object" :src="item.rdImages">
-								</a>
-							</div>
-						</div>
+						<!--热点组件-->
+						<byks-redian :redian="redian"></byks-redian>
+						
 					</div>
 				</div>
 				<div class="main-right-bottom">

@@ -17,162 +17,14 @@
            {% include 'main-left.tpl' %}
             <div class="main-right">
                 <div class="main-right-top">
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">作品图片</a>
-                                </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-xs-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="../../../zhzl/lcgl/images/30.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="../../../zhzl/lcgl/images/31.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="../../../zhzl/lcgl/images/32.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="../../../zhzl/lcgl/images/33.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="../../../zhzl/lcgl/images/34.jpg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingTwo">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
-                                        aria-controls="collapseTwo">作品内容简介</a>
-                                </h4>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body">
-                                    <div class="border-left-biaoti">
-                                        <h5>作者介绍</h5>
-                                    </div>
-                                    <div class="jieshao">
-                                        <span class="biaoti">作者名称</span><span>马帅彬</span>
-                                    </div>
-                                    <div class="border-left-biaoti">
-                                        <h5>作品介绍</h5>
-                                    </div>
-                                    <div class="jieshao">
-                                        <p>
-                                            <span class="biaoti">作品类型</span><span>积木类型</span>
-                                        </p>
-                                        <p>
-                                            <span class="biaoti">目前点赞</span><span>2134</span>次
-                                        </p>
-                                        <p>
-                                            <span class="biaoti">发表时间</span><span>2017年3月12日</span>
-                                        </p>
-                                        <p>
-                                            <span class="biaoti">内容介绍</span><span>阿富汗的撒利好法拉地方傻大个好好搞个我阿斯顿发回来咯合法哈了咖啡的和</span>
-                                        </p>
-
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                     <!--作品详情组件-->
+                    <byks-zpdetail :row="row"></byks-ZPDetail>
                 </div>
                 <div class="main-right-mid">
                     <div class="border-top-biaoti">
                         <h4>评论区</h4>
                     </div>
-                    <div class="pinglun">
-                        <div class="pinglun-top">
-                            <a href="#">
-                                <img src="../../../zhzl/lcgl/images/21.jpg">
-                            </a>
-                            <h6>马帅彬</h6>
-                            <span>2017年3月12日</span>
-                        </div>
-                        <div class="pinglun-bottom">
-                            <p>作品非常不错希望作者再接再厉可以做出更好的作品供大家欣赏</p>
-                        </div>
-                    </div>
-                    <div class="pinglun">
-                        <div class="pinglun-top">
-                            <a href="#">
-                                <img src="../../../zhzl/lcgl/images/21.jpg">
-                            </a>
-                            <h6>马帅彬</h6>
-                            <span>2017年3月12日</span>
-                        </div>
-                        <div class="pinglun-bottom">
-                            <p>作品非常不错希望作者再接再厉可以做出更好的作品供大家欣赏</p>
-                        </div>
-                    </div>
-                    <div class="pinglun">
-                        <div class="pinglun-top">
-                            <a href="#">
-                                <img src="../../../zhzl/lcgl/images/21.jpg">
-                            </a>
-                            <h6>马帅彬</h6>
-                            <span>2017年3月12日</span>
-                        </div>
-                        <div class="pinglun-bottom">
-                            <p>作品非常不错希望作者再接再厉可以做出更好的作品供大家欣赏</p>
-                        </div>
-                    </div>
-                    <div class="pinglun">
-                        <div class="pinglun-top">
-                            <a href="#">
-                                <img src="../../../zhzl/lcgl/images/21.jpg">
-                            </a>
-                            <h6>马帅彬</h6>
-                            <span>2017年3月12日</span>
-                        </div>
-                        <div class="pinglun-bottom">
-                            <p>作品非常不错希望作者再接再厉可以做出更好的作品供大家欣赏</p>
-                        </div>
-                    </div>
-                    <div class="pinglun">
-                        <div class="pinglun-top">
-                            <a href="#">
-                                <img src="../../../zhzl/lcgl/images/21.jpg">
-                            </a>
-                            <h6>马帅彬</h6>
-                            <span>2017年3月12日</span>
-                        </div>
-                        <div class="pinglun-bottom">
-                            <p>作品非常不错希望作者再接再厉可以做出更好的作品供大家欣赏</p>
-                        </div>
-                    </div>
-                    <div class="pinglun">
-                        <div class="pinglun-top">
-                            <a href="#">
-                                <img src="../../../zhzl/lcgl/images/21.jpg">
-                            </a>
-                            <h6>马帅彬</h6>
-                            <span>2017年3月12日</span>
-                        </div>
-                        <div class="pinglun-bottom">
-                            <p>作品非常不错希望作者再接再厉可以做出更好的作品供大家欣赏</p>
-                        </div>
-                    </div>
+                    <byks-pinglun :pinglun="pinglun"></byks-pinglun>
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li>
@@ -198,10 +50,29 @@
                         <h4>发表评论</h4>
                     </div>
                     <p>
-                        <textarea name="" id="" cols="30" rows="10">说点什么吧。。。</textarea>
+                        <textarea name="" id="" cols="30" rows="10" v-model="textarea"></textarea>
                     </p>
-                    <a href="#" class="button button-glow button-rounded button-royal">发表</a>
+                    <a href="javascript:void(0)" class="button button-glow button-rounded button-royal" @click="save">发表</a>
+                    <a href="javascript:void(0)" class="button button-glow button-rounded button-royal" @click="back">返回</a>
                 </div>
+                <!--模态框部分-->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">图片详情</h4>
+							</div>
+							<div class="modal-body ">
+								<img class="model_img">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+								<!--<button type="button" class="btn btn-primary">Save changes</button>-->
+							</div>
+							</div>
+						</div>
+				</div>
             </div>
         </div>
 

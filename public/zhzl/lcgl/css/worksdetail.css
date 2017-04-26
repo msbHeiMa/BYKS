@@ -31,7 +31,7 @@
     background-color: #f0f0f0;
     text-align: center;
 }
-.main-right-mid>.pinglun{
+.main-right-mid>div>.pinglun{
     width:100%;
     background-color: #fff;
     margin-top:15px;
@@ -43,7 +43,7 @@
     height:40px;
     padding-left:5px;
 }
-.main-right-mid>.pinglun img{
+.main-right-mid>div>.pinglun img{
     width:40px;
     height:40px;
     float:left;
@@ -90,4 +90,20 @@ textarea{
     border-radius: 5px;
     margin-top:15px;
     resize: none !important;
+}
+.main-right-bottom{
+    margin-bottom: 30px;
+}
+.images{
+    height:90px !important;
+}
+.content-left{
+    margin-left:10px;
+}
+.nopinglun{
+    min-height: 100px;
+    line-height: 100px;
+    background-color: #fff;
+    margin-top: 15px;
+    font-size: 20px;
 }

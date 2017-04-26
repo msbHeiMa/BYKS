@@ -1,3 +1,4 @@
+        //精彩展示部分组件
         Vue.component('byks-zhanshi', {
             template: `
             <div class="main-right-yidong">
@@ -46,40 +47,59 @@
             },
             
         })
+        //热点推送部分组件
+        Vue.component('byks-redian', {
+            template: `
+                <div>
+                    <div class="media" v-for="item in redian" >
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ item.rdBiaoTi }}</h4>
+                            <span>{{ item.rdIntro }}</span>
+                        </div>
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" :src="item.rdImages">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `,
+            props:["redian"],   
+            methods: {
+          
+                
+            },
+            
+        })
         var url="http://localhost:3002";
         var main = new Vue({
-            el: '.main-right',
-            data:{
-                row:[
-                      
-                    ],
-                redian:[
-                    // {
-                    //     "rdBiaoTi":"家长孩子动手",
-                    //     "rdIntro":"第一届家长孩子动手结束",
-                    //     "rdImages":"../../../zhzl/lcgl/images/47.jpg",
-                    // }
-                ],
+            el: '#main',
+            data:function(){
+                return {
+                    row:[],
+                    redian:{},
+                }
             },
             beforeCreate:function(){
+                //页面中间精彩内容展示部分请求
                 $.ajax({
-                url:url+"/byks/getJCZS",  
-                type: "get",
-                success: function(res){
-                    var arry=[[[],[]],[[],[]]];
-                    var I=0;  
-                    for(var i=0;i<arry.length;i++){
-                        for(var x=0;x<arry[i].length;x++){
-                            for(var y=0;y<3;y++){
-                                 arry[i][x][y]=res.data[I];
-                                 I++;
+                    url:url+"/byks/getJCZS",  
+                    type: "get",
+                    success: function(res){
+                        var arry=[[[],[]],[[],[]]];
+                        var I=0;  
+                        for(var i=0;i<arry.length;i++){
+                            for(var x=0;x<arry[i].length;x++){
+                                for(var y=0;y<3;y++){
+                                    arry[i][x][y]=res.data[I];
+                                    I++;
+                                }
+                            
                             }
-                           
                         }
-                    }
-                    main.row=arry;
-                },
-                error:function(){},
+                        main.row=arry;
+                    },
+                    error:function(){},
                 });
             },
             mounted: function () {
@@ -108,7 +128,6 @@
                         this.close()
                     }
                    });
-
                 },
             },
             

@@ -27,8 +27,9 @@
     margin-bottom:10px;
 }
 .media img{
-    width:80px;
-    height:60px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 .main-right-bottom{
     width:100%;

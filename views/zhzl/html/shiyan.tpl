@@ -17,7 +17,17 @@
 <body class="skin-blue sidebar-mini">
     
     <div id="main"> 
-        <byks-kecheng  :row="row"></byks-kecheng>
+        <ul> 
+            <li :src="utterer">{{utterer}}</li>
+            <!--<li :src="row.id">{{row.id}}</li>
+            <li :src="row.utterer">{{row.utterer}}</li>
+            <li>{{row.fbTime}}</li>
+            <li>{{row.worksName}}</li>
+            <li>{{row.worksName}}</li>-->
+        </ul>
+        <byks-ul :row="row"></byks-ul>
+        <byks-li :row="row"></byks-li>
+        
     </div>    
     <script src="../../../components/jquery/dist/jquery.min.js"></script>
     <script src="../../../components/bootstrap-3.3.7-dist/js/bootstrap.js"></script>

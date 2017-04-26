@@ -1,7 +1,16 @@
 var nav = new Vue({
     el: ".daohang",
-    data: {
-
+    data:function(){
+        return {
+            data:[
+                {url:"index.html",content:"首页"},
+                {url:"Videoteaching.html",content:"视频教学"},
+                {url:"Enrolmentcourses.html",content:"报名课程"},
+                {url:"worksshow.html",content:"作品展示"},
+                {url:"Mymanagement.html",content:"我的管理"},
+                {url:"login.html",content:"登陆/注册"},
+            ]
+        }
     },
     mounted: function () {
         this.login();
@@ -12,6 +21,7 @@ var nav = new Vue({
             var userName = this.getCookie("userName");
             var passWord = this.getCookie("passWord");
             var userImage = this.getCookie("userImage");
+            var userId = this.getCookie("userId");
             userImage == "" ? userImage = '../../../zhzl/lcgl/images/admin.jpg' : userImage = userImage;
             if (userName != "" && userImage != "") {
                 $(".userImage").attr("href","Mymanagement.html");
@@ -51,6 +61,7 @@ var nav = new Vue({
                         nav.deleteCookie("userName");
                         nav.deleteCookie("passWord");
                         nav.deleteCookie("userImage");
+                        nav.deleteCookie("userId");
                         $(".userImage").attr("href","login.html");
                         $(".username>b>a>img").attr("src","../../../zhzl/lcgl/images/admin.jpg");
                         $(".welcome").html(`欢迎登陆`);

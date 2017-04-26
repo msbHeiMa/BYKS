@@ -31,6 +31,7 @@ var main = new Vue({
             //获取Cookie内储存的用户数据用来进行判断
             var cookieUserName=this.getCookie("userName");
             var cookiePassWord=this.getCookie("passWord");
+            var cookieUserId=this.getCookie("userId");
             //当本地的Cookie没有用户信息时才发出请求
             if(cookieUserName==""&&cookiePassWord==""){
                 $.ajax({
@@ -56,6 +57,7 @@ var main = new Vue({
                                     $(".welcome").html(`欢迎${res.data.userName}回来`);
                                     $(".logout").html("退出");
                                     //将用户信息存入cookie中
+                                    document.cookie=`userId=${res.data.id};`;
                                     document.cookie=`userName=${res.data.userName};`;
                                     document.cookie=`passWord=${res.data.passWord};`;
                                     document.cookie=`userImage=${res.data.userImage};`;
@@ -82,23 +84,31 @@ var main = new Vue({
         },
         //注册操作
         zhuce:function(){
+            //获取输入框中的注册信息
             inputUserName=this.zhuceDate.inputUserName;
             inputPassWord=this.zhuceDate.inputPassWord;
             passWordAgain=this.zhuceDate.passWordAgain;
+            //获得cookie信息方便判断
             var cookieUserName=this.getCookie("userName");
             var cookiePassWord=this.getCookie("passWord");
+            var cookieUserId=this.getCookie("userId");
+            //两次密码输入不一样的情况
             if(inputPassWord!=passWordAgain){
                 main.dialog("两次输入密码不同")
+            //在登陆的状态下进行注册时
             }else if(cookieUserName!="" || cookiePassWord!=""){
                 main.dialog("请先退出当前登陆在注册")
+            //注册信息填写不完整时
             }else if(inputUserName==undefined || inputPassWord==undefined){
                 main.dialog("缺少用户名或密码")
             }else{
+                //注册请求接口
                 $.ajax({
                     url:this.url+"/byks/zhuce",
                     data:{
                         userName:inputUserName,
                         passWord:inputPassWord,
+                        userImage:'../../../zhzl/lcgl/images/admin.jpg',
                     },
                     type:"post",
                     success:function(res){
@@ -119,6 +129,7 @@ var main = new Vue({
                                     $(".welcome").html(`欢迎${inputUserName}回来`);
                                     $(".logout").html("退出");
                                     //将用户信息存入cookie中
+                                    document.cookie=`userId=${res.data};`;
                                     document.cookie=`userName=${inputUserName};`;
                                     document.cookie=`passWord=${inputPassWord};`;
                                     document.cookie=`userImage=${userImage};`;
