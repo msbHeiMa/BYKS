@@ -17,15 +17,8 @@
 			{% include 'main-left.tpl' %}
 			<div class="main-right">
 				<div class="main-right-top">
-					<div class="button-group">
-						<button type="button" class="button button-pill button-action">全部类型</button>
-						<button type="button" class="button button-pill button-action">积木类型</button>
-						<button type="button" class="button button-pill button-action">变形金刚</button>
-						<button type="button" class="button button-pill button-action">星际争霸</button>
-						<button type="button" class="button button-pill button-action">其他类型</button>
-					</div>
-					
-					<byks-zuopin :row="row"></byks-zuopin>
+					<!--作品展示组件-->
+					<byks-zuopin :row="row" :type="type"></byks-zuopin>
 				</div>
 				<div class="main-right-bottom">
 					<nav aria-label="Page navigation">

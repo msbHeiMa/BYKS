@@ -46,7 +46,7 @@ Vue.component('byks-zpdetail', {
                                             <span class="biaoti">目前点赞</span><span class="content-left">{{row.likeTime}}</span>次
                                         </p>
                                         <p>
-                                            <span class="biaoti">发表时间</span><span class="content-left">{{row.fbTime}}</span>
+                                            <span class="biaoti">发表时间</span><span class="content-left">{{row.createDate}}</span>
                                         </p>
                                         <p>
                                             <span class="biaoti">内容介绍</span><span class="content-left">{{row.worksIntro}}</span>

@@ -68,50 +68,95 @@ var ZXXFILE = {
 		return this;
 	},
 	
-	//文件上传
+	// 文件上传
 	funUploadFile: function() {
-		var self = this;	
-		if (location.host.indexOf("sitepointstatic") >= 0) {
-			//非站点服务器上运行
-			return;	
-		}
-		for (var i = 0, file; file = this.fileFilter[i]; i++) {
-			(function(file) {
-				var xhr = new XMLHttpRequest();
-				// 自己添加
-				var url="../../../zhzl/lcgl/js/file_upload.php";
-				if (xhr.upload) {
-					// 上传中
-					xhr.upload.addEventListener("progress", function(e) {
-						self.onProgress(file, e.loaded, e.total);
-					}, false);
+		// var self = this;	
+		// if (location.host.indexOf("sitepointstatic") >= 0) {
+		// 	//非站点服务器上运行
+		// 	return;	
+		// }
+		// for (var i = 0, file; file = this.fileFilter[i]; i++) {
+		// 	(function(file) {
+		// 		var xhr = new XMLHttpRequest();
+		// 		if (xhr.upload) {
+		// 			// 上传中
+		// 			xhr.upload.addEventListener("progress", function(e) {
+		// 				self.onProgress(file, e.loaded, e.total);
+		// 			}, false);
 		
-					// 文件上传成功或是失败
-					xhr.onreadystatechange = function(e) {
-						if (xhr.readyState == 4) {
-							if (xhr.status == 200) {
-								self.onSuccess(file, xhr.responseText);
-								self.funDeleteFile(file);
-								if (!self.fileFilter.length) {
-									//全部完毕
-									self.onComplete();	
-								}
-							} else {
-								self.onFailure(file, xhr.responseText);		
-							}
+		// 			// 文件上传成功或是失败
+		// 			xhr.onreadystatechange = function(e) {
+		// 				if (xhr.readyState == 4) {
+		// 					if (xhr.status == 200) {
+		// 						self.onSuccess(file, xhr.responseText);
+		// 						self.funDeleteFile(file);
+		// 						if (!self.fileFilter.length) {
+		// 							//全部完毕
+		// 							self.onComplete();	
+		// 						}
+		// 					} else {
+		// 						self.onFailure(file, xhr.responseText);		
+		// 					}
+		// 				}
+		// 			};
+		
+		// 			// 开始上传
+		// 			xhr.open("POST", self.url, true);
+		// 			xhr.setRequestHeader("X_FILENAME", encodeURIComponent(file.name));
+		// 			xhr.send(file);
+		// 		}	
+		// 	})(file);	
+		// }	
+		// var formData = new FormData($("#uploadForm")[0]);
+        // var url = "http://localhost:3002/uploader/uploader";
+        // $.ajax({
+        //     url: url,
+        //     type: 'POST',
+        //     data: formData,
+
+        //     /**
+        //      * 必须false才会避开jQuery对 formdata 的默认处理
+        //      * XMLHttpRequest会对 formdata 进行正确的处理
+        //      */
+        //     processData: false,
+        //     /**
+        //      *必须false才会自动加上正确的Content-Type
+        //      */
+        //     contentType: false,
+        //     success: function (responseStr) {
+        //         alert(responseStr.newPath);
+        //         $("img").attr({"src": responseStr.newPath}).prependTo($("body"));
+        //     },
+        //     error: function (responseStr) {
+        //         alert(responseStr.newPath);
+        //     }
+        // });
+		if ($('#fileImage').val().length) {
+            var fileName = $('#fileImage').val();
+            var extension = fileName.substring(fileName.lastIndexOf('.'), fileName.length).toLowerCase();
+            if (extension == ".jpg" || extension == ".png") {
+                    var data = new FormData();
+                    data.append('upload', $('#fileImage')[0].files[0]);
+					// var data = new FormData($('#fileImage')[0].files[0]);
+                    $.ajax({
+                        // url: 'http://localhost:3002/uploader',
+						url: 'http://localhost:3002/uploader/uploader',
+                        // url: 'http://localhost:3002/zhzl/lcgl/js/uploader.js',
+						type: 'POST',
+                        data: data,
+                        
+                        contentType: false, //不可缺参数
+                        processData: false, //不可缺参数
+                        success: function (responseStr) {
+							alert(responseStr.newPath);
+						},
+						error: function (responseStr) {
+							alert(responseStr.newPath);
 						}
-					};
-		
-					// 开始上传
-					// xhr.open("POST", self.url, true);
-					// 自己添加
-					xhr.open("POST",url, true);
-					xhr.setRequestHeader("X_FILENAME", encodeURIComponent(file.name));
-					xhr.send(file);
-				}	
-			})(file);	
-		}	
-			
+
+                    });
+            } 
+        }			
 	},
 	
 	init: function() {
@@ -128,9 +173,10 @@ var ZXXFILE = {
 			this.fileInput.addEventListener("change", function(e) { self.funGetFiles(e); }, false);	
 		}
 		
-		//上传按钮提交
-		if (this.upButton) {
-			this.upButton.addEventListener("click", function(e) { self.funUploadFile(e); }, false);	
-		} 
+		// //上传按钮提交
+		// if (this.upButton) {
+		// 	this.upButton.addEventListener("click", function(e) { self.funUploadFile(e); }, false);	
+		// } 
 	}
 };
+

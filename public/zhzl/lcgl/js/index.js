@@ -14,7 +14,6 @@
 													<p>{{rowthree.jcIntro}}</p>
 													<p>
 														<a href="javascript:void(0)" class="button button-raised button-primary button-pill" role="button">查看</a>
-														<a href="javascript:void(0)" class="button button-raised button-default button-pill" role="button">分享</a>
 													</p>
 												</div>
 											</div>

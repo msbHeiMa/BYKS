@@ -1,6 +1,9 @@
         Vue.component('byks-zuopin', {
             template: `
                 <div>
+                    <div class="button-group">
+						<button type="button" class="button button-pill button-action" v-for="item in type" @click="change(item)">{{item}}</button>
+					</div>
                      <div class="media" v-for="(rowone,index) in row">
 						<div class="media-left">
 							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -16,7 +19,7 @@
 						<div class="media-body">
 							<h4 class="media-heading">发表人:<span>{{rowone.utterer}}</span></h4>
 							<div class="media-body-top">
-								<p>发表时间:<span>{{rowone.fbTime}}</span></p>
+								<p>发表时间:<span>{{rowone.createDate}}</span></p>
 								<p>作品名称:<span>{{rowone.worksName}}</span></p>
 							</div>
 							<div class="media-body-mid">
@@ -37,16 +40,22 @@
             props: {
                 data: Array,
                 row:Array,
+                type:Array,
             },
             
             methods: {
+                //点击不同类型查询不同类型作品
+                change:function(type){
+                    alert(type)
+                },
+                //点赞功能
                 like:function(index){
                   //获取作品id和用户ID
                   var zpId=main.row[index].id;
                   var cookieUserId=main.getCookie("userId");
                   var cookieUserName=main.getCookie("userName");
                   var cookiePassWord=main.getCookie("passWord");
-                  var likeTime=parseInt(main.row[index].likeTime)+1;
+                //   var likeTime=parseInt(main.row[index].likeTime)+1;
                   //点赞记录请求
                   if(cookieUserName==""||cookiePassWord==""||cookieUserId==""){
                       main.dialog("请先登陆")
@@ -56,13 +65,14 @@
                         data:{
                             zpId:zpId,
                             userId:cookieUserId,
-                            likeTime:likeTime,
+                            // likeTime:likeTime,
                         },
                         type:"post",
                         success:function(res){
-                            if(res.success==1&&res.data=="可赞"){
+                            if(res.success==1&&res.data.zhuangtai=="可赞"){
                                  main.dialog("点赞成功")
-                                 main.row[index].likeTime=parseInt(main.row[index].likeTime)+1;
+                                //  main.row[index].likeTime=parseInt(main.row[index].likeTime)+1;
+                                main.row[index].likeTime=res.data.likeTime;
                             }else if(res.success==1&&res.data=="您已经赞过了"){
                                 main.dialog("您已经赞过了")
                             }
@@ -82,9 +92,8 @@
         var main = new Vue({
             el: '#main',
             data:{
-                row:[
-                      
-                    ]
+                row:[],
+                type:["全部类型","积木类型","变形金刚","星际争霸","其他类型",],
             },
             beforeCreate:function(){
                 //作品展示页面 获取作品信息接口

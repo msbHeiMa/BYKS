@@ -24,7 +24,7 @@
                         <div class="upload_box">
                             <div class="upload_main">
                                 <div class="upload_choose">
-                                    <input id="fileImage" type="file" size="30" name="fileselect[]" multiple />
+                                    <input id="fileImage" class="fileupload" type="file" size="30" name="fileselect[]" multiple />
                                     <span id="fileDragArea" class="upload_drag_area">或者将图片拖到此处</span>
                                 </div>
                                 <div id="preview" class="upload_preview"></div>
@@ -42,21 +42,21 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1">作品名称</span>
-                        <input type="text" class="form-control" placeholder="请输入您的作品名称" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="请输入您的作品名称" aria-describedby="basic-addon1" v-model="mc">
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1">作品介绍</span>
-                        <input type="text" class="form-control" placeholder="请输入您的作品介绍" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="请输入您的作品介绍" aria-describedby="basic-addon1" v-model="js">
                     </div>
                     <div class="input-group leixing">
                         <div>
                             <p>请选择作品类型</p>
                         </div>
-                        <ul>
-                            <li><a href="#" class="first">积木类型</a></li>
-                            <li><a href="#">变形金刚</a></li>
-                            <li><a href="#">星际争霸</a></li>
-                            <li><a href="#">其他</a></li>
+                        <ul id="getType">
+                            <li @click="getType('积木类型')"><a href="javascript:" class="first">积木类型</a></li>
+                            <li @click="getType('变形金刚')"><a href="javascript:">变形金刚</a></li>
+                            <li @click="getType('星际争霸')"><a href="javascript:">星际争霸</a></li>
+                            <li @click="getType('其他')"><a href="javascript:">其他</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                         <h4>操作</h4>
                     </div>
                     <div class="caozuo">
-                        <button type="button" id="fileSubmit" class="upload_submit_btn button button-glow button-rounded button-royal">上传作品</button>
+                        <button type="button" id="fileSubmit" class="upload_submit_btn button button-glow button-rounded button-royal" @click="upload()">上传作品</button>
                         <!--<a href="#" class="button button-glow button-rounded button-royal">上传作品</a>-->
                         <a href="index.html" class="button button-glow button-rounded button-highlight">暂不上传</a>
                     </div>
