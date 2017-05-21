@@ -46,7 +46,20 @@
             methods: {
                 //点击不同类型查询不同类型作品
                 change:function(type){
-                    alert(type)
+                    var self=this;
+                    $.ajax({
+                        url:"http://localhost:3002/byks/getAllZPByType?type="+type,
+                        type:"get",
+                        success:function(res){
+                            main.row=res.data
+                            for(var i=0;i<res.data.length;i++){
+                                var IMAGES=[];
+                                IMAGES=res.data[i].worksImages.split(','); 
+                                main.row[i].images=IMAGES;
+                            }
+                        }.bind(self),
+                        error:function(){}.bind(self)
+                    })
                 },
                 //点赞功能
                 like:function(index){
