@@ -19,13 +19,14 @@
 				<div class="main-right-top">
 					<div>
 						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">我的上传</a></li>
-							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">报名的课程</a></li>
-							<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">我的关注</a></li>
+							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" @click="lunhuan('上传')">我的上传</a></li>
+							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" @click="lunhuan('报名')">报名的课程</a></li>
+							<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" @click="lunhuan('关注')">我的关注</a></li>
 						</ul>
 						<div class="tab-content">
 							<!--我的上传-->
-							<div role="tabpanel" class="tab-pane active" id="home">
+							<byks-shangchuan :row="row"></byks-shangchuan>
+							<!--<div role="tabpanel" class="tab-pane active" id="home">
 								<div class="media">
 									<div class="media-left">
 										<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -106,9 +107,10 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							<!--报名的课程-->
-							<div role="tabpanel" class="tab-pane" id="profile">
+							<byks-baoming :row="row"></byks-baoming>
+							<!--<div role="tabpanel" class="tab-pane" id="profile">
 								<div class="row">
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
@@ -259,9 +261,10 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							<!--我的关注-->
-							<div role="tabpanel" class="tab-pane" id="messages">
+							<byks-guanzhu :row="row"></byks-guanzhu>
+							<!--<div role="tabpanel" class="tab-pane" id="messages">
 									<div class="row">
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
@@ -412,7 +415,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div>-->
 						</div>
 
 					</div>

@@ -13,6 +13,7 @@
                 upload:function(){
                     var imgs = $('strong');
                     var userName = this.getCookie("userName");
+                    var cookieUserId=this.getCookie("userId");
                     var img=[];
                     var imgUrl="";
                     for(var i=0;i<imgs.length;i++){
@@ -41,7 +42,24 @@
                             },
                             success:function(res){
                                 if(res.success){
-                                    this.dialog("上传成功")
+                                    $.ajax({
+                                        url:"http://localhost:3002/byks/uploadByUser",
+                                        type:"post",
+                                        data:{
+                                            userId:cookieUserId,
+                                            manageType:"上传",
+                                            zpId:res.data.zpId,
+                                        },
+                                        success:function(res){
+                                            if(res.success){
+                                                main.dialog("上传成功")
+                                            }
+                                        }.bind(self),
+                                        error:function(res){
+                                            main.dialog("系统繁忙")
+                                        }.bind(self),
+                                    })
+                                    
                                 }
                             }.bind(self),
                             error:function(){
