@@ -28,7 +28,7 @@
                     </div>
                     <!--vue.js框架自定义标签-->
                     <byks-kecheng  :row="row"></byks-kecheng>
-                    <nav aria-label="Page navigation">
+                    <!--<nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li>
                             <a href="#" aria-label="Previous">
@@ -46,7 +46,7 @@
                             </a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav>-->
                 </div>
                 <div class="main-right-bottom">
 

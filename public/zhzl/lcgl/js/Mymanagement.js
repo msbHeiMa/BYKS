@@ -2,36 +2,36 @@ var url="http://localhost:3002";
  Vue.component('byks-shangchuan', {
             template: `
                    <div role="tabpanel" class="tab-pane active" id="home">
-								<div class="media" v-for="(rowone,index) in row">
-									<div class="media-left">
-										<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-											<div class="carousel-inner" role="listbox">
-												<div :class="{item:true,active:indextwo==0?true:false}" v-for="(rowimage,indextwo) in rowone.images">
-													<a href="javascript:void(0)">
-														<img :src="rowimage">
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="media-body">
-										<h4 class="media-heading">发表人:<span>{{rowone.utterer}}</span></h4>
-										<div class="media-body-top">
-											<p>发表时间:<span>{{rowone.createDate}}</span></p>
-											<p>作品名称:<span>{{rowone.worksName}}</span></p>
-										</div>
-										<div class="media-body-mid">
-											<p>作品类型:<span>{{rowone.worksType}}</span></p>
-											<p>点赞次数:<span>{{rowone.likeTime}}</span></p>
-										</div>
+                        <div class="media" v-for="(rowone,index) in row">
+                            <div class="media-left">
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner" role="listbox">
+                                        <div :class="{item:true,active:indextwo==0?true:false}" v-for="(rowimage,indextwo) in rowone.images">
+                                            <a href="javascript:void(0)">
+                                                <img :src="rowimage">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">发表人:<span>{{rowone.utterer}}</span></h4>
+                                <div class="media-body-top">
+                                    <p>发表时间:<span>{{rowone.createDate}}</span></p>
+                                    <p>作品名称:<span>{{rowone.worksName}}</span></p>
+                                </div>
+                                <div class="media-body-mid">
+                                    <p>作品类型:<span>{{rowone.worksType}}</span></p>
+                                    <p>点赞次数:<span>{{rowone.likeTime}}</span></p>
+                                </div>
 
-										<p>内容介绍:<span>{{rowone.worksIntro}}</span></p>
-										<div>
-											<a href="javascript:void(0)" class="button button-glow button-rounded button-caution">删除作品</a>
-											<a :href="\'worksdetail.html?id=\'+rowone.zpId" class="button button-glow button-rounded button-highlight">查看评论</a>
-										</div>
-									</div>
-								</div>				
+                                <p>内容介绍:<span>{{rowone.worksIntro}}</span></p>
+                                <div>
+                                    <button class="button button-glow button-rounded button-caution" @click="shanchu(rowone.zpId,index)">删除作品</button>
+                                    <a :href="\'worksdetail.html?id=\'+rowone.zpId" class="button button-glow button-rounded button-highlight">查看评论</a>
+                                </div>
+                            </div>
+                        </div>				
 				   </div>
                    
 					`,
@@ -41,7 +41,29 @@ var url="http://localhost:3002";
             },
             
             methods: {
-
+                //删除
+                shanchu:function(zpId,index){
+                    var self=this;
+                    main.getUserId();
+                    if(main.userId!=""){
+                        alert("确定删除吗，删除后无法找回")
+                         $.ajax({
+                            url:url+"/byks/deleteZp?zpId="+zpId,
+                            type:"get",
+                            success:function(res){
+                                if(res.success){
+                                    main.dialog("删除成功")
+                                    main.row.splice(index,1)
+                                }
+                            }.bind(self),
+                            error:function(res){
+                                main.dialog("系统繁忙请稍后再试")
+                            }.bind(self),
+                        })
+                    }else{
+                        main.dialog("请先登录")
+                    }                   
+                },
             },
             
         })
@@ -63,8 +85,8 @@ var url="http://localhost:3002";
 												<p>适合人群:{{rowone.crowd}}</p>
 												<p>课时：{{rowone.keShi}}</p>
 												<p>
-													<a href="javascript:void(0)" class="button button-action  button-pill button-jumbo button-small" role="button">课程安排</a>
-													<a href="javascript:void(0)" class="button button-caution button-pill button-jumbo button-small" role="button">取消报名</a>
+													<a href="javascript:void(0)" class="button button-action  button-pill button-jumbo button-small" role="button" @click="anpai(rowone.kcId)">课程安排</a>
+													<a href="javascript:void(0)" class="button button-caution button-pill button-jumbo button-small" role="button" @click="quxiao(rowone.id,index)">取消报名</a>
 												</p>
 											</div>
 										</div>
@@ -78,7 +100,32 @@ var url="http://localhost:3002";
             },
             
             methods: {
+                //课程安排
+                anpai:function(kcId){
 
+                },
+                //取消报名
+                quxiao:function(id,index){
+                    var self=this;
+                    main.getUserId();
+                    if(main.userId!=""){
+                        $.ajax({
+                            url:url+"/byks/quXiaoBaoMingKc?id="+id,
+                            type:"get",
+                            success:function(res){
+                                if(res.success){
+                                    main.dialog("取消成功");
+                                    main.row.splice(index,1);
+                                }
+                            }.bind(self),
+                            error:function(res){
+                                main.dialog("系统繁忙请稍后再试")
+                            }.bind(self),
+                        })
+                    }else{
+                        main.dialog("请先登录")
+                    }
+                },
             },
             
         })
@@ -100,8 +147,8 @@ var url="http://localhost:3002";
 												<p>适合人群:{{rowone.crowd}}</p>
 												<p>课时：{{rowone.keShi}}</p>
 												<p>
-													<a href="javascript:void(0)" class="button button-highlight  button-pill button-jumbo button-small" role="button">报名课程</a>
-													<a href="javascript:void(0)" class="button button-caution button-pill button-jumbo button-small" role="button">取消关注</a>
+													<a href="javascript:void(0)" class="button button-highlight  button-pill button-jumbo button-small" role="button" @click="bmKeCheng(rowone.id,rowone.kcId)">报名课程</a>
+													<a href="javascript:void(0)" class="button button-caution button-pill button-jumbo button-small" role="button" @click="qxGuanZhu(rowone.id,index)">取消关注</a>
 												</p>
 											</div>
 										</div>
@@ -116,7 +163,50 @@ var url="http://localhost:3002";
             },
             
             methods: {
-               
+                //报名课程
+               bmKeCheng:function(id,kcId){
+                    var self=this;
+                    main.getUserId();
+                    if(main.userId!=""){
+                        $.ajax({
+                            url:url+"/byks/baoMingKc",
+                            type:"post",
+                            data:{
+                                id:id,
+                                kcId:kcId,
+                                userId:main.userId,
+                            },
+                            success:function(res){
+                                if(res.success){
+                                    main.dialog(res.data.back);
+                                }
+                            }.bind(self),
+                            error:function(res){}.bind(self),
+                        })
+                    }else{
+                        main.dialog("请先登录")
+                    }
+               },
+               //取消关注
+               qxGuanZhu:function(id,index){
+                   var self=this;
+                    main.getUserId();
+                    if(main.userId!=""){
+                         $.ajax({
+                            url:url+"/byks/quXiaoGuanZhuKc?id="+id,
+                            type:"get",
+                            success:function(res){
+                                if(res.success){
+                                    main.dialog("取消成功");
+                                    main.row.splice(index,1)
+                                }
+                            }.bind(self),
+                            error:function(res){}.bind(self),
+                        })
+                    }else{
+                        main.dialog("请先登录")
+                    }
+               }
             },
             
         })
@@ -124,30 +214,10 @@ var url="http://localhost:3002";
             el: '#main',
             data:{
                 row:[],
+                userId:"",
             },
-            // beforeCreate:function(){
-            //     //我的管理页面 上传作品课程接口
-            //     $.ajax({
-            //         url:url+"/byks/getManagement",  
-            //         type: "post",
-            //         data:{
-
-            //         },
-            //         success: function(res){
-            //             main.row=res.data
-            //             for(var i=0;i<res.data.length;i++){
-            //                 var IMAGES=[];
-            //                 IMAGES=res.data[i].worksImages.split(','); 
-            //                 main.row[i].images=IMAGES;
-            //             }
-            //         },
-            //         error:function(){},
-            //     });
-            // },
             mounted: function () {
-                var cookieUserId=this.getCookie("userId");
-                var cookieUserName=this.getCookie("userName");
-                this.userId=cookieUserId;
+                this.getUserId();
                 this.load('上传');
             },
             methods: {
@@ -176,6 +246,12 @@ var url="http://localhost:3002";
                 //点击不同标签页时
                 lunhuan:function(type){
                     this.load(type);
+                },
+                //获取userId
+                getUserId:function(){
+                    var cookieUserId=this.getCookie("userId");
+                    var cookieUserName=this.getCookie("userName");
+                    this.userId=cookieUserId;
                 },
                 //获得cookie
                 getCookie: function (name) {
