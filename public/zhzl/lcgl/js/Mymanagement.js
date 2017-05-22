@@ -28,7 +28,7 @@ var url="http://localhost:3002";
 										<p>内容介绍:<span>{{rowone.worksIntro}}</span></p>
 										<div>
 											<a href="javascript:void(0)" class="button button-glow button-rounded button-caution">删除作品</a>
-											<a :href="\'worksdetail.html?id=\'+rowone.id" class="button button-glow button-rounded button-highlight">查看评论</a>
+											<a :href="\'worksdetail.html?id=\'+rowone.zpId" class="button button-glow button-rounded button-highlight">查看评论</a>
 										</div>
 									</div>
 								</div>				

@@ -29,7 +29,7 @@
                     }else {
                         var self=this;
                         $.ajax({
-                            url:this.url+"/byks/upload", 
+                            url:this.url+"/byks/upload", //上传作品页面
                             type:"post",
                             data:{
                                 utterer:userName,
@@ -43,7 +43,7 @@
                             success:function(res){
                                 if(res.success){
                                     $.ajax({
-                                        url:"http://localhost:3002/byks/uploadByUser",
+                                        url:"http://localhost:3002/byks/uploadByUser",//上传页面 将作品Id保存到我的管理数据库
                                         type:"post",
                                         data:{
                                             userId:cookieUserId,
