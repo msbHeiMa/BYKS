@@ -85,7 +85,7 @@ var url="http://localhost:3002";
 												<p>适合人群:{{rowone.crowd}}</p>
 												<p>课时：{{rowone.keShi}}</p>
 												<p>
-													<a href="javascript:void(0)" class="button button-action  button-pill button-jumbo button-small" role="button" @click="anpai(rowone.kcId)">课程安排</a>
+													<button  class="button button-action  button-pill button-jumbo button-small" role="button" @click="anpai(rowone.kcId)" data-toggle="modal" data-target="#myModal">课程安排</button>
 													<a href="javascript:void(0)" class="button button-caution button-pill button-jumbo button-small" role="button" @click="quxiao(rowone.id,index)">取消报名</a>
 												</p>
 											</div>
@@ -129,7 +129,7 @@ var url="http://localhost:3002";
             },
             
         })
-         Vue.component('byks-guanzhu', {
+        Vue.component('byks-guanzhu', {
             template: `
                             <div role="tabpanel" class="tab-pane" id="messages">
 								<div class="row" >
@@ -163,7 +163,7 @@ var url="http://localhost:3002";
             },
             
             methods: {
-                //报名课程
+               //报名课程
                bmKeCheng:function(id,kcId){
                     var self=this;
                     main.getUserId();
@@ -210,10 +210,41 @@ var url="http://localhost:3002";
             },
             
         })
+        Vue.component('byks-tanchu', {
+            template: `
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">图片详情</h4>
+							</div>
+							<div class="modal-body ">
+								<img class="model_img">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							</div>
+							</div>
+						</div>
+				     </div>
+                   
+					`,
+            props: {
+                data: Array,
+                rowtanchu:Array,
+            },
+            
+            methods: {
+     
+            },
+            
+        })
          var main = new Vue({
             el: '#main',
             data:{
                 row:[],
+                rowtanchu:[],
                 userId:"",
             },
             mounted: function () {
