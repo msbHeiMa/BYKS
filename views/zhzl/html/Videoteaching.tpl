@@ -69,7 +69,7 @@
 					</div>
 				</div>
 				<div class="main-right-bottom">
-					<nav aria-label="Page navigation">
+					<!--<nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li>
                             <a href="#" aria-label="Previous">
@@ -87,7 +87,7 @@
                             </a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav>-->
 				</div>
 				<div class="main-right-mid">
 
@@ -97,7 +97,7 @@
 
 	</div>
 	<div id="footer">
-		毕业设计机器人教育网站©2017 马帅彬版权所有
+		毕业设计机器人教育网站©2017 华北理工大学轻工学院马帅彬版权所有
 	</div>
 	{% include 'script.tpl' %}
 	<script type="text/javascript" src="../../../zhzl/lcgl/js/Videoteaching.js"></script>

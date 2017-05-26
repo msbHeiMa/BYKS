@@ -1,3 +1,4 @@
+       //搜索栏和下方作品显示组件
         Vue.component('byks-zuopin', {
             template: `
                 <div>
@@ -57,6 +58,10 @@
                                 IMAGES=res.data[i].worksImages.split(','); 
                                 main.row[i].images=IMAGES;
                             }
+                            //将返回的数据复制一份放到不变量中方便后面使用
+                            main.copyrow=main.row;
+                            //截取数组每页只显示5个
+                            main.row=main.row.slice(0,5)
                         }.bind(self),
                         error:function(){}.bind(self)
                     })
@@ -101,15 +106,48 @@
             },
             
         })
+         Vue.component('byks-fenye', {
+            template: `
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li v-for="item,index in copyrow" v-if="index<fenye()"><a href="javascript:" @click="tiaozhuan(index)">{{index+1}}</a></li>
+                        </ul>
+                    </nav>
+                   
+					`,
+            props: {
+                data: Array,
+                copyrow:Array,
+            },
+            
+            methods: {
+                //根据返回数据的个数确定页数y
+                fenye:function(){
+                    var y=(this.copyrow.length%5==0?this.copyrow.length/5:parseInt(this.copyrow.length/5)+1);
+                    return y
+                },
+                //根据点击的页数截取复制数组中的相应位置的数据
+                tiaozhuan:function(index){
+                    var start=parseInt(index*5);
+                    var stop=parseInt(start+5);
+                    main.row=main.copyrow.slice(start,stop)
+                }
+            },
+            
+        })
         var url="http://localhost:3002";
         var main = new Vue({
             el: '#main',
-            data:{
-                row:[],
-                type:["全部类型","积木类型","变形金刚","星际争霸","其他类型",],
+             data:function(){
+                return {
+                    row:[],
+                    copyrow:[],
+                    type:["全部类型","积木类型","变形金刚","星际争霸","其他类型",],
+                }
             },
             beforeCreate:function(){
                 //作品展示页面 获取作品信息接口
+                var self=this
                 $.ajax({
                     url:url+"/byks/getAllZP",  
                     type: "get",
@@ -120,7 +158,9 @@
                             IMAGES=res.data[i].worksImages.split(','); 
                             main.row[i].images=IMAGES;
                         }
-                    },
+                        this.copyrow=this.row;
+                        main.row=main.row.slice(0,5)
+                    }.bind(self),
                     error:function(){},
                 });
             },

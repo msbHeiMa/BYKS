@@ -56,7 +56,7 @@
 
     </div>
     <div id="footer">
-        毕业设计机器人教育网站©2017 马帅彬版权所有
+        毕业设计机器人教育网站©2017 华北理工大学轻工学院马帅彬版权所有
     </div>
     {% include 'script.tpl' %}
     <script type="text/javascript" src="../../../zhzl/lcgl/js/Enrolmentcourses.js"></script>

@@ -5,3 +5,4 @@
     <script src="../../../components/artDialog-5.0.3/artDialog.min.js"></script>
     <script src="../../../components/artDialog-5.0.3/jquery.artDialog.min.js"></script>
     <script type="text/javascript" src="../../../zhzl/lcgl/js/nav-main-left.js"></script>
+    <script type="text/javascript" src="../../../zhzl/lcgl/js/zxxFile.js"></script>

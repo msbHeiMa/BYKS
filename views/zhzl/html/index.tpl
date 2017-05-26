@@ -67,6 +67,8 @@
 						<h3>热点推送</h3>
 						<!--热点组件-->
 						<byks-redian :redian="redian"></byks-redian>
+						<!--热点详情弹框组件-->
+						<byks-rdtanchu :rdtanchu="rdtanchu"></byks-rdtanchu>
 						
 					</div>
 				</div>
@@ -74,6 +76,8 @@
 					<h3>精彩内容欣赏</h3>
 					<!--精彩内容展示组件-->
 					<byks-zhanshi :row="row"></byks-zhanshi>
+					<!--精彩内容详情弹框组件-->
+					<byks-zstanchu :zstanchu="zstanchu"></byks-zstanchu>
 				</div>
 				<div class="main-right-mid">
 					<h3>机器人教育发展历程</h3>
@@ -99,7 +103,7 @@
 
 	</div>
 	<div id="footer">
-		毕业设计机器人教育网站©2017 马帅彬版权所有
+		毕业设计机器人教育网站©2017 华北理工大学轻工学院马帅彬版权所有
 	</div>
 	{% include 'script.tpl' %}
 	<script type="text/javascript" src="../../../zhzl/lcgl/js/index.js"></script>

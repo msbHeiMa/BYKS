@@ -1,5 +1,6 @@
 var url="http://localhost:3002";
- Vue.component('byks-shangchuan', {
+        //我的上传部分组件
+        Vue.component('byks-shangchuan', {
             template: `
                    <div role="tabpanel" class="tab-pane active" id="home">
                         <div class="media" v-for="(rowone,index) in row">
@@ -67,6 +68,7 @@ var url="http://localhost:3002";
             },
             
         })
+        //报名课程组件
          Vue.component('byks-baoming', {
             template: `
                             <div role="tabpanel" class="tab-pane" id="profile">
@@ -85,7 +87,7 @@ var url="http://localhost:3002";
 												<p>适合人群:{{rowone.crowd}}</p>
 												<p>课时：{{rowone.keShi}}</p>
 												<p>
-													<button  class="button button-action  button-pill button-jumbo button-small" role="button" @click="anpai(rowone.kcId)" data-toggle="modal" data-target="#myModal">课程安排</button>
+													<button  class="button button-action  button-pill button-jumbo button-small" role="button" @click="anpai(rowone.kcId,rowone.id)" data-toggle="modal" data-target="#myModal">课程安排</button>
 													<a href="javascript:void(0)" class="button button-caution button-pill button-jumbo button-small" role="button" @click="quxiao(rowone.id,index)">取消报名</a>
 												</p>
 											</div>
@@ -101,8 +103,17 @@ var url="http://localhost:3002";
             
             methods: {
                 //课程安排
-                anpai:function(kcId){
-
+                anpai:function(kcId,id){
+                    var self=this;
+                    $.ajax({
+                        url:url+"/byks/getKcDetailByKcId?kcId="+kcId,
+                        type:"get",
+                        success:function(res){
+                            main.rowtanchu=res.data;
+                            main.rowtanchu.pzId=id;
+                        }.bind(self),
+                        error:function(res){}.bind(self),
+                    })
                 },
                 //取消报名
                 quxiao:function(id,index){
@@ -129,6 +140,7 @@ var url="http://localhost:3002";
             },
             
         })
+        //我的关注部分组件
         Vue.component('byks-guanzhu', {
             template: `
                             <div role="tabpanel" class="tab-pane" id="messages">
@@ -210,6 +222,7 @@ var url="http://localhost:3002";
             },
             
         })
+        //报名课程 课程安排组件
         Vue.component('byks-tanchu', {
             template: `
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -217,10 +230,17 @@ var url="http://localhost:3002";
 							<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h4 class="modal-title" id="myModalLabel">图片详情</h4>
+								<h4 class="modal-title" id="myModalLabel">课程详情</h4>
 							</div>
 							<div class="modal-body ">
-								<img class="model_img">
+								<div class="input-group"><span id="basic-addon1" class="input-group-addon">上课地点</span> <input readOnly="true"  :placeholder="rowtanchu.skAdderss" class="form-control"></div>
+                                <div class="input-group"><span id="basic-addon1" class="input-group-addon">上课时间</span> <input readOnly="true"  :placeholder="rowtanchu.skTime" class="form-control"></div>
+                                <div class="input-group"><span id="basic-addon1" class="input-group-addon">报名费</span> <input readOnly="true"  :placeholder="rowtanchu.money" class="form-control"></div>
+                                <div class="input-group"><span id="basic-addon1" class="input-group-addon">上课导师</span> <input readOnly="true"  :placeholder="rowtanchu.skDs" class="form-control"></div>
+                                <div class="input-group"><span id="basic-addon1" class="input-group-addon">导师电话</span> <input readOnly="true"  :placeholder="rowtanchu.skDsTel" class="form-control"></div>
+                                <div class="input-group"><span id="basic-addon1" class="input-group-addon">课程负责人</span> <input readOnly="true"  :placeholder="rowtanchu.kcFzr" class="form-control"></div>
+                                <div class="input-group"><span id="basic-addon1" class="input-group-addon">负责人电话</span> <input readOnly="true"  :placeholder="rowtanchu.kcFzrTel" class="form-control"></div>
+                                <div class="input-group"><span id="basic-addon1" class="input-group-addon">报名凭证号</span> <input readOnly="true"  :placeholder="rowtanchu.pzId" class="form-control"></div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -232,7 +252,7 @@ var url="http://localhost:3002";
 					`,
             props: {
                 data: Array,
-                rowtanchu:Array,
+                rowtanchu:Object,
             },
             
             methods: {
@@ -240,11 +260,83 @@ var url="http://localhost:3002";
             },
             
         })
+        //上传头像
+        Vue.component('byks-sctx', {
+            template: `
+                    <div role="tabpanel" class="tab-pane" id="touxiang">
+                        <div class="shangchuan">
+                            <div class="upload_box">
+                                <div class="upload_main">
+                                    <div class="upload_choose">
+                                        <input id="fileImage" class="fileupload" type="file" size="30" name="fileselect[]" multiple />
+                                        <span id="fileDragArea" class="upload_drag_area">或者将图片拖到此处</span>
+                                    </div>
+                                    <div id="preview" class="upload_preview"></div>
+                                </div>
+                                <div id="uploadInf" class="upload_inf"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" id="fileSubmit" class="upload_submit_btn button button-glow button-rounded button-royal" @click="sctx()">上传头像</button>
+                        </div>
+                    </div>  
+                   
+					`,
+            props: {
+             
+            },
+            
+            methods: {
+                sctx:function(){
+                    var img=$("strong").html();
+                    var userImage = this.getCookie("userImage");
+                    var userId = this.getCookie("userId");
+                    var imgurl="../../../zhzl/lcgl/images/"+img;
+                    var self=this;
+                    $.ajax({
+                        url:url+"/byks/changUserImage",
+                        type:"post",
+                        data:{
+                            userId:userId,
+                            userImage:imgurl,
+                        },
+                        success:function(res){
+                            if(res.success){
+                                main.dialog("上传成功")
+                                this.deleteCookie(userImage);
+                                document.cookie=`userImage=${imgurl};`;
+                                $(".username>b>a>img").attr("src",imgurl);
+                            }
+                        }.bind(self),
+                        error:function(req){
+                            main.dialog("上传失败")
+                        }.bind(self),
+                    })
+                },
+                //获得cookie
+                getCookie: function (name) {
+                    var strCookie = document.cookie;
+                    var arrCookie = strCookie.split("; ");
+                    for (var i = 0; i < arrCookie.length; i++) {
+                        var arr = arrCookie[i].split("=");
+                        if (arr[0] == name) return arr[1];
+                    }
+                    return "";
+                },
+                //删除cookie
+                deleteCookie: function (name) {
+                    var date = new Date();
+                    date.setTime(date.getTime() - 10000);
+                    document.cookie = name + "=v; expires=" + date.toGMTString();
+                },
+            },
+            
+        })
          var main = new Vue({
             el: '#main',
             data:{
                 row:[],
-                rowtanchu:[],
+                rowtanchu:{},
                 userId:"",
             },
             mounted: function () {

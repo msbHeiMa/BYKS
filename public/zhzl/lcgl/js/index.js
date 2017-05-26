@@ -13,35 +13,36 @@
 													<h4>{{rowthree.jcBiaoTi}}</h4>
 													<p>{{rowthree.jcIntro}}</p>
 													<p>
-														<a href="javascript:void(0)" class="button button-raised button-primary button-pill" role="button">查看</a>
+														<button class="button button-raised button-primary button-pill" role="button" data-toggle="modal" data-target="#myModalzs" @click="chakan(rowthree.id)">查看</button>    
 													</p>
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>
+									</div>                    
 							</div>
 						</div>
-					</div>`,
+					</div>`, 
             props: {
                 data: Array,
                 row:Array,
             },
             
             methods: {
-                baoming:function(){
-                   art.dialog({
-                        title: '欢迎',
-                        content: '欢迎使用artDialog对话框组件！',
-                        ok: function () {
-                           this.close()
-                        }
-                    });
-
-                },
-                guanzhu:function(){
-                    alert("关注成功")
-                },
+              chakan:function(id){
+                //   alert(id)
+                var self=this;
+                $.ajax({
+                    url:url+"/byks/getJCZSDetail?id="+id,
+                    type:"get",
+                    success:function(res){
+                        main.zstanchu=res.data;
+                        var IMAGES=[];
+                        IMAGES=res.data.cpzs.split(','); 
+                        main.zstanchu.cpzs=IMAGES;
+                    }.bind(self),
+                    error:function(res){}.bind(self),
+                })
+              },
                 
             },
             
@@ -56,7 +57,7 @@
                             <span>{{ item.rdIntro }}</span>
                         </div>
                         <div class="media-left">
-                            <a href="#">
+                            <a href="javascript:viod(0)" data-toggle="modal" data-target="#myModalrd" @click="rddetail(item.id)">
                                 <img class="media-object" :src="item.rdImages">
                             </a>
                         </div>
@@ -65,8 +66,105 @@
             `,
             props:["redian"],   
             methods: {
-          
+                //热点详情链接
+                rddetail:function(id){
+                    // alert(id)
+                    var self=this;
+                $.ajax({
+                    url:url+"/byks/getReDianDetail?id="+id,
+                    type:"get",
+                    success:function(res){
+                        main.rdtanchu=res.data;
+                        var IMAGES=[];
+                        IMAGES=res.data.rdXximgs.split(','); 
+                        main.rdtanchu.rdXximgs=IMAGES;
+                    }.bind(self),
+                    error:function(res){}.bind(self),
+                })
+                },
                 
+            },
+            
+        })
+        //热点详情弹框组件
+        Vue.component('byks-rdtanchu', {
+            template: `
+                    <div class="modal fade" id="myModalrd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">热点详情</h4>
+							</div>
+							<div class="modal-body ">
+                                <div class="row">
+                                        <span  class="input-group-addon span-top">内容图片</span>
+                                        <div class="col-xs-6 col-md-3" v-for="item in rdtanchu.rdXximgs">
+                                            <img :src="item" class="images">
+                                        </div>
+                                </div>
+                                <div class="input-group"><span  class="input-group-addon">热点标题</span> <input readOnly="true"  :placeholder="rdtanchu.rdBiaoTi" class="form-control"></div>
+                                <div class="input-group"><span  class="jieshao input-group-addon">热点详情</span> <textarea class="zstextarea" readOnly="true">{{rdtanchu.rdXxnr}}</textarea>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							</div>
+							</div>
+						</div>
+				     </div>
+                   
+					`,
+            props: {
+                data: Array,
+                rdtanchu:Object,
+            },
+            
+            methods: {
+     
+            },
+            
+        })
+        //精彩内容详情弹框组件
+        Vue.component('byks-zstanchu', {
+            template: `
+                    <div class="modal fade" id="myModalzs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">精彩内容详情</h4>
+							</div>
+							<div class="modal-body ">
+								<div class="row">
+                                        <span  class="input-group-addon span-top">成品展示</span>
+                                        <div class="col-xs-6 col-md-3" v-for="img in zstanchu.cpzs">
+                                            <img :src="img" class="images">
+                                        </div>
+                                </div>
+                                <div class="input-group"><span  class="input-group-addon">上市时间</span> <input readOnly="true"  :placeholder="zstanchu.ssTime" class="form-control"></div>
+                                <div class="input-group"><span  class="input-group-addon">产品长度</span> <input readOnly="true"  :placeholder="zstanchu.cpCd" class="form-control"></div>
+                                <div class="input-group"><span  class="input-group-addon">产品宽度</span> <input readOnly="true"  :placeholder="zstanchu.cpKd" class="form-control"></div>
+                                <div class="input-group"><span  class="input-group-addon">产品高度</span> <input readOnly="true"  :placeholder="zstanchu.cpGd" class="form-control"></div>
+                                <div class="input-group"><span  class="input-group-addon">适合人群</span> <input readOnly="true"  :placeholder="zstanchu.shrq" class="form-control"></div>
+                                <div class="input-group"><span  class="input-group-addon">组件个数</span> <input readOnly="true"  :placeholder="zstanchu.zjgs" class="form-control"></div>
+                                <div class="input-group"><span  class="input-group-addon">可组形态</span> <input readOnly="true"  :placeholder="zstanchu.kzxt" class="form-control"></div>
+                                <div class="input-group"><span  class="jieshao input-group-addon">产品介绍</span> <textarea class="zstextarea" readOnly="true">{{zstanchu.cpJs}}</textarea>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							</div>
+							</div>
+						</div>
+				     </div>
+                   
+					`,
+            props: {
+                data: Array,
+                zstanchu:Object,
+            },
+            
+            methods: {
+     
             },
             
         })
@@ -77,6 +175,8 @@
                 return {
                     row:[],
                     redian:{},
+                    zstanchu:{},
+                    rdtanchu:{},
                 }
             },
             beforeCreate:function(){
@@ -111,7 +211,6 @@
                         type:"get",
                         success:function(res){
                             main.redian=res.data;
-                            console.log(main.redian)
                         },
                         error:function(){},
                     })
