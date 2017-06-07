@@ -1,5 +1,4 @@
-     
-   
+        //已发表课程表格组件
         Vue.component('byks-yifabu', {
             template: `
                         <div role="tabpanel" class="tab-pane active" id="home">  	

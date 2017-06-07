@@ -41,11 +41,11 @@
 							<div role="tabpanel" class="tab-pane" id="register">
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon1">输入名称</span>
-									<input type="text" class="form-control" placeholder="请输入用户名" aria-describedby="basic-addon1"v-model="zhuceDate.inputUserName">
+									<input type="text" class="form-control" placeholder="请输入0-4位的用户名" aria-describedby="basic-addon1"v-model="zhuceDate.inputUserName">
 								</div>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon2">输入密码</span>
-									<input type="password" class="form-control" placeholder="请输入密码" aria-describedby="basic-addon2" v-model="zhuceDate.inputPassWord">
+									<input type="password" class="form-control" placeholder="请输入包含数字和字母的密码" aria-describedby="basic-addon2" v-model="zhuceDate.inputPassWord">
 								</div>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon3">确认密码</span>

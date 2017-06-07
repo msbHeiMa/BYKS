@@ -17,8 +17,8 @@
                                     <p>适合人群:{{entry.crowd}}</p>
                                     <p>课时：{{entry.keShi}}</p>
                                     <p>
-                                        <a href="javascript:void(0)" class="button button-raised button-primary button-pill" role="button" @click="baoming(entry.ID)">报名</a>
-                                        <a href="javascript:void(0)" class="button button-raised button-default button-pill" role="button" @click="guanzhu(entry.ID)">关注</a>
+                                        <a href="javascript:void(0)" class="button button-raised button-primary button-pill" role="button" @click="baoming(entry.id)">报名</a>
+                                        <a href="javascript:void(0)" class="button button-raised button-default button-pill" role="button" @click="guanzhu(entry.id)">关注</a>
                                     </p>
                                 </div>
                             </div>

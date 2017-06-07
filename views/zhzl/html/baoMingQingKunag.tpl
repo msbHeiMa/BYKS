@@ -7,7 +7,7 @@
 	<title>毕业课设</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
 	{% include 'stylesheet.tpl' %}
-	<link rel="stylesheet" href="../../../zhzl/lcgl/css/faBuKeCheng.css" />
+	<link rel="stylesheet" href="../../../zhzl/lcgl/css/baoMingQingKunag.css" />
 </head>
 
 <body class="skin-blue sidebar-mini">
@@ -17,7 +17,7 @@
 			{% include 'main-left.tpl' %}
 			<div class="main-right">
 				<div class="main-right-top">
-				
+					<byks-baominguser :row="row"></byks-baominguser>
 				</div>
 				<div class="main-right-bottom">
 				
@@ -33,7 +33,7 @@
 		毕业设计机器人教育网站©2017 华北理工大学轻工学院马帅彬版权所有
 	</div>
 	{% include 'script.tpl' %}
-	<script type="text/javascript" src="../../../zhzl/lcgl/js/faBuKeCheng.js"></script>
+	<script type="text/javascript" src="../../../zhzl/lcgl/js/baoMingQingKunag.js"></script>
 	<script>
 		$('.carousel').carousel();
 		$('#someTab').tab('show')

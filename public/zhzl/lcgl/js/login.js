@@ -66,8 +66,8 @@ var main = new Vue({
                                         $(".main-left").html(`
                                             <ul>
                                                 <li><a href="zuoPinShenHe.html">作品审核</a></li>
-                                                <li><a href="worksshow.html">发布课程</a></li>
-                                                <li><a href="index.html">课程报名情况</a></li>
+                                                <li><a href="faBuKeCheng.html">发布课程</a></li>
+                                                <li><a href="baoMingQingKunag.html">课程报名情况</a></li>
                                             </ul>
                                         `)
                                         $(".panduanxianshi").html("")
@@ -104,8 +104,16 @@ var main = new Vue({
             var cookieUserName=this.getCookie("userName");
             var cookiePassWord=this.getCookie("passWord");
             var cookieUserId=this.getCookie("userId");
+            // var userYZ=/{1,4}/;   
+            var passWordYZ=/^([A-Z]|[a-z]|[0-9]){0,8}$/;
+            //用户名长度验证
+            if(inputUserName.length>4){
+                main.dialog("用户名不能大于4位")
+            //密码 长度和组成验证
+            }else if(!passWordYZ.exec(inputPassWord)){
+                main.dialog("密码必须有由8位数字和字母组成")
             //两次密码输入不一样的情况
-            if(inputPassWord!=passWordAgain){
+            }else if(inputPassWord!=passWordAgain){
                 main.dialog("两次输入密码不同")
             //在登陆的状态下进行注册时
             }else if(cookieUserName!="" || cookiePassWord!=""){
@@ -164,7 +172,7 @@ var main = new Vue({
                 title:'登录信息',
                 content:ts,
                 okVlaue:"确定",
-                width:'15em',
+                width:'17em',
                 height:'50',
                 ok: function () {
                     this.close()
