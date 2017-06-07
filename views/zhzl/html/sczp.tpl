@@ -56,7 +56,7 @@
                             <li @click="getType('积木类型')"><a href="javascript:" class="first">积木类型</a></li>
                             <li @click="getType('变形金刚')"><a href="javascript:">变形金刚</a></li>
                             <li @click="getType('星际争霸')"><a href="javascript:">星际争霸</a></li>
-                            <li @click="getType('其他')"><a href="javascript:">其他</a></li>
+                            <li @click="getType('其他类型')"><a href="javascript:">其他</a></li>
                         </ul>
                     </div>
                 </div>

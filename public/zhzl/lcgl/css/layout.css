@@ -94,6 +94,8 @@ h3{
     width:20%;
     float:left;
     overflow:hidden;
+    min-width: 242.81px;
+    min-height: 235px;
 }
 .main-left>ul{
     list-style: none;

@@ -2,20 +2,39 @@ var nav = new Vue({
     el: ".daohang",
     data:function(){
         return {
-            data:[
-                {url:"index.html",content:"首页"},
-                {url:"Videoteaching.html",content:"视频教学"},
-                {url:"Enrolmentcourses.html",content:"报名课程"},
-                {url:"worksshow.html",content:"作品展示"},
-                {url:"Mymanagement.html",content:"我的管理"},
-                {url:"login.html",content:"登陆/注册"},
-            ]
+            data:'',
         }
     },
     mounted: function () {
         this.login();
+        this.getUserType();
     },
     methods: {
+        //从cookie中获取userType
+        getUserType:function(){
+            var userType = this.getCookie("userType");
+            this.data=userType;
+            if(userType=="用户" || userType==""){
+                 $(".main-left").html(`
+                    <ul>
+                        <li><a href="sczp.tpl">上传作品</a></li>
+                        <li><a href="Videoteaching.html">了解机器人</a></li>
+                        <li><a href="Enrolmentcourses.html">了解课程</a></li>
+                        <li><a href="worksshow.html">查看大家作品</a></li>
+                        <li><a href="index.html">关注热点</a></li>
+                    </ul>
+                `)
+            }else if(userType=="管理员"){
+                $(".main-left").html(`
+                    <ul>
+                        <li><a href="zuoPinShenHe.html">作品审核</a></li>
+                        <li><a href="faBuKeCheng.html">发布课程</a></li>
+                        <li><a href="baoMingQingKunag.html">课程报名情况</a></li>
+                    </ul>
+                `)
+  
+            }
+        },
         //页面跳转时默认进行的登陆操作
         login: function () {
             var userName = this.getCookie("userName");
@@ -57,15 +76,17 @@ var nav = new Vue({
                     okVlaue: "确定",
                     ok: function () {
                         this.close();
-                        
                         nav.deleteCookie("userName");
                         nav.deleteCookie("passWord");
                         nav.deleteCookie("userImage");
                         nav.deleteCookie("userId");
+                        nav.deleteCookie("userType");
                         $(".userImage").attr("href","login.html");
                         $(".username>b>a>img").attr("src","../../../zhzl/lcgl/images/admin.jpg");
                         $(".welcome").html(`欢迎登陆`);
                         $(".logout").html("");
+                        nav.getUserType();
+                        window.location.href="index.html";
                     }
                 });         
         },

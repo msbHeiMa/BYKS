@@ -1,0 +1,107 @@
+.border-top-biaoti{
+    width:100%;
+    background-color: #fff;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    border-top:#e70c1d 2px solid;
+}
+.caozuo{
+    margin:60px;
+}
+.main-right-mid>.input-group{
+    width:60%;
+    margin-top:20px;
+}
+.leixing>div{
+    overflow:hidden;
+}
+.leixing>div>p{
+    width:150px;
+    height:35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 3px;
+    border:1px solid #ccc;
+    float:left;
+}
+.leixing>ul{
+    float:left;
+    overflow:hidden;
+    padding-left:0;
+}
+.leixing>ul>li{
+    float:left;
+    overflow:hidden;
+}
+.leixing>ul>li>a{
+    display:inline-block;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    text-decoration: none;
+}
+.leixing>ul>li>a:not(.first){
+    margin-left:15px;
+}
+.leixing>ul>li>a:hover{
+    background:#8bc220;
+    color:#fff;
+}
+#preview5{
+    width:80%;
+    text-align: center;
+    height:250px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    clear:both;
+    margin:15px;
+}
+.upload_choose{
+    height:150px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    padding-top:20px;
+}
+#fileImage{
+    display: inline-block;
+    
+}
+#fileDragArea{
+    display: inline-block;
+    width: 60%;
+    height:90px;
+    padding: 4em 0;
+    margin-left: .5em;
+    border: 1px dashed #ddd;
+    background: #fff url(../../../zhzl/lcgl/images/drag.png) no-repeat 20px center;
+    color: #999;
+    text-align: center;
+    vertical-align: middle;
+}
+#preview{
+    width:100%;
+    height:250px;
+    margin-top:15px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    overflow:hidden;
+}
+#preview div{
+    width:20%;
+    float:left;
+}
+#preview img{
+    width:100%;
+    height:210px;
+}
+.wtg{
+    color: red;
+}
+table tr td{
+    text-align: center;
+}
+table tr th{
+    text-align: center;
+}

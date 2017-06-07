@@ -1,3 +1,4 @@
+       //课程介绍组件
         Vue.component('byks-kecheng', {
             template: `
                     <div class="row">
@@ -30,7 +31,9 @@
             mounted: function () {
                 var cookieUserId=this.getCookie("userId");
                 var cookieUserName=this.getCookie("userName");
+                var cookieUserType=this.getCookie("userType");
                 this.userId=cookieUserId;
+                this.userType=cookieUserType;
             },
             methods: {
                 //报名
@@ -38,6 +41,8 @@
                     var self=this;
                     if(this.userId==""){
                         this.dialog("请先登录")
+                    }else if(this.userType=="管理员"){
+                        this.dialog("管理员无法进行此操作")
                     }else{
                          $.ajax({
                             url:"http://localhost:3002/byks/uploadByUser",//上传页面 将作品Id保存到我的管理数据库
@@ -64,6 +69,8 @@
                      var self=this;
                     if(this.userId==""){
                         this.dialog("请先登录")
+                    }else if(this.userType=="管理员"){
+                        this.dialog("管理员无法进行此操作")
                     }else{
                          $.ajax({
                             url:"http://localhost:3002/byks/uploadByUser",//上传页面 将作品Id保存到我的管理数据库

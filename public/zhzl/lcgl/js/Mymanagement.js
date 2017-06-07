@@ -27,9 +27,16 @@ var url="http://localhost:3002";
                                 </div>
 
                                 <p>内容介绍:<span>{{rowone.worksIntro}}</span></p>
-                                <div>
+                                <div class="shenhe">
+                                    <p>作品状态:<span>{{rowone.status}}</span></p>
+                                    <p v-if="rowone.status==='未通过'">未通过原因:<span>{{rowone.wtgyy}}</span></p>
+                                </div>
+                                <div v-if="rowone.status=='通过'">
                                     <button class="button button-glow button-rounded button-caution" @click="shanchu(rowone.zpId,index)">删除作品</button>
                                     <a :href="\'worksdetail.html?id=\'+rowone.zpId" class="button button-glow button-rounded button-highlight">查看评论</a>
+                                </div>
+                                <div v-else>
+                                    <button class="button button-glow button-rounded button-caution" @click="shanchu(rowone.zpId,index)">删除作品</button>
                                 </div>
                             </div>
                         </div>				

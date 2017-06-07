@@ -1,4 +1,4 @@
-       //搜索栏和下方作品显示组件
+       //搜索栏和下方作品展示组件
         Vue.component('byks-zuopin', {
             template: `
                 <div>
@@ -106,6 +106,7 @@
             },
             
         })
+        //分页组件
          Vue.component('byks-fenye', {
             template: `
                     <nav aria-label="Page navigation">

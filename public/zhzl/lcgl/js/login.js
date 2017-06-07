@@ -61,6 +61,18 @@ var main = new Vue({
                                     document.cookie=`userName=${res.data.userName};`;
                                     document.cookie=`passWord=${res.data.passWord};`;
                                     document.cookie=`userImage=${res.data.userImage};`;
+                                    document.cookie=`userType=${res.data.userType};`;
+                                    if(res.data.userType=="管理员"){
+                                        $(".main-left").html(`
+                                            <ul>
+                                                <li><a href="zuoPinShenHe.html">作品审核</a></li>
+                                                <li><a href="worksshow.html">发布课程</a></li>
+                                                <li><a href="index.html">课程报名情况</a></li>
+                                            </ul>
+                                        `)
+                                        $(".panduanxianshi").html("")
+                        
+                                    }
                                 }
                             });
                         
@@ -109,6 +121,7 @@ var main = new Vue({
                         userName:inputUserName,
                         passWord:inputPassWord,
                         userImage:'../../../zhzl/lcgl/images/admin.jpg',
+                        userType:"",
                     },
                     type:"post",
                     success:function(res){
@@ -129,10 +142,12 @@ var main = new Vue({
                                     $(".welcome").html(`欢迎${inputUserName}回来`);
                                     $(".logout").html("退出");
                                     //将用户信息存入cookie中
+                                    var userType="用户";
                                     document.cookie=`userId=${res.data};`;
                                     document.cookie=`userName=${inputUserName};`;
                                     document.cookie=`passWord=${inputPassWord};`;
                                     document.cookie=`userImage=${userImage};`;
+                                    document.cookie=`userType=${userType};`;
                                 }
                             });
                         }
