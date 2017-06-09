@@ -12,12 +12,12 @@
 
 <body class="skin-blue sidebar-mini">
 	{% include 'nav.tpl' %}
-	<div id="main">
+	<div id="main"> 
 		<div class="main">
 			{% include 'main-left.tpl' %}
 			<div class="main-right">
 				<div class="main-right-top">
-					<byks-baominguser :row="row"></byks-baominguser>
+					<byks-bmuser :row="row"></byks-bmuser>
 				</div>
 				<div class="main-right-bottom">
 				

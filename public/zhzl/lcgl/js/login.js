@@ -111,13 +111,13 @@ var main = new Vue({
                 main.dialog("用户名不能大于4位")
             //密码 长度和组成验证
             }else if(!passWordYZ.exec(inputPassWord)){
-                main.dialog("密码必须有由8位数字和字母组成")
+                main.dialog("密码必须由由8位数字和字母组成")
             //两次密码输入不一样的情况
             }else if(inputPassWord!=passWordAgain){
                 main.dialog("两次输入密码不同")
             //在登陆的状态下进行注册时
             }else if(cookieUserName!="" || cookiePassWord!=""){
-                main.dialog("请先退出当前登陆在注册")
+                main.dialog("请先退出当前登录再注册")
             //注册信息填写不完整时
             }else if(inputUserName==undefined || inputPassWord==undefined){
                 main.dialog("缺少用户名或密码")

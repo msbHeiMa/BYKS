@@ -1,6 +1,6 @@
      
    
-       Vue.component('byks-baominguser', {
+       Vue.component('byks-bmuser', {
             template: `
                         <div role="tabpanel" class="tab-pane active" id="home">  	
                                 <table class="table table-bordered">

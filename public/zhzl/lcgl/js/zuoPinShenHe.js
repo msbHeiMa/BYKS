@@ -1,6 +1,6 @@
 var url="http://localhost:3002";
        //管理员后台页面 作品审核组件
-        Vue.component('byks-zuopinshenhe', {
+        Vue.component('byks-zpsh', {
             template: `
                           <div v-if="type==='待办'" role="tabpanel" class="tab-pane active" id="home">  	
                                 <table class="table table-bordered">
@@ -188,7 +188,7 @@ var url="http://localhost:3002";
             
         })
         //详细按钮 作品详细组件
-         Vue.component('byks-zptanchu', {
+         Vue.component('byks-zptc', {
             template: `
                     <div class="modal fade" id="myModalzs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 						<div class="modal-dialog" role="document">
